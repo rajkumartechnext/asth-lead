@@ -13,16 +13,16 @@
   let cursor = new Date(today.getFullYear(), today.getMonth(), 1);
 
   const events = [
-    { day: 3, monthOffset: 0, title: "Design review", time: "09:30", tone: "tone-coral" },
-    { day: 5, monthOffset: 0, title: "Team stand-up", time: "10:00", tone: "tone-mint" },
-    { day: 9, monthOffset: 0, title: "Supplier call", time: "11:30", tone: "tone-yellow" },
-    { day: 12, monthOffset: 0, title: "Sales planning", time: "14:00", tone: "tone-green" },
-    { day: 16, monthOffset: 0, title: "Invoice review", time: "15:30", tone: "tone-coral" },
-    { day: 18, monthOffset: 0, title: "Product sync", time: "10:30", tone: "tone-mint" },
-    { day: 20, monthOffset: 0, title: "Campaign launch", time: "09:00", tone: "tone-yellow" },
-    { day: 23, monthOffset: 0, title: "Stock audit", time: "13:00", tone: "tone-green" },
-    { day: 26, monthOffset: 0, title: "Client call", time: "16:00", tone: "tone-coral" },
-    { day: 30, monthOffset: 0, title: "Month close", time: "11:00", tone: "tone-ink" }
+    { day: 3, monthOffset: 0, title: "New member profile review", time: "09:30", tone: "tone-coral" },
+    { day: 5, monthOffset: 0, title: "Matchmaking team meeting", time: "10:00", tone: "tone-mint" },
+    { day: 9, monthOffset: 0, title: "Referral partner call", time: "11:30", tone: "tone-yellow" },
+    { day: 12, monthOffset: 0, title: "Lead follow-up planning", time: "14:00", tone: "tone-green" },
+    { day: 16, monthOffset: 0, title: "Membership renewal review", time: "15:30", tone: "tone-coral" },
+    { day: 18, monthOffset: 0, title: "Profile verification session", time: "10:30", tone: "tone-mint" },
+    { day: 20, monthOffset: 0, title: "Matchmaking event", time: "09:00", tone: "tone-yellow" },
+    { day: 23, monthOffset: 0, title: "Incomplete profile follow-up", time: "13:00", tone: "tone-green" },
+    { day: 26, monthOffset: 0, title: "Member introduction call", time: "16:00", tone: "tone-coral" },
+    { day: 30, monthOffset: 0, title: "Monthly lead review", time: "11:00", tone: "tone-ink" }
   ];
 
   const sameDay = (a, b) => a.getFullYear() === b.getFullYear() &&

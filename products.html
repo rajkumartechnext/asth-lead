@@ -5,12 +5,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Products &amp; stock Ã¢â‚¬â€ Trombone Admin</title>
-  <meta name="description" content="Inventory list with stock levels, warehouse capacity and reorder actions." />
+  <title>Membership Plans | Astha Marriage Bureau</title>
+  <meta name="description" content="Membership plan list with pricing, availability and follow-up actions." />
   <meta name="theme-color" content="#0e0e0e" />
 
 
-  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -46,35 +46,35 @@
         </div>
         <div class="nav-group">
 
-          <a class="nav-link" href="members.html" title="Orders">
+          <a class="nav-link" href="leads.html" title="Leads">
             <i class="icon bi bi-person-plus" aria-hidden="true"></i>
-            <span class="nav-text">Members</span>
+            <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
-          <a class="nav-link" href="invoices.html" title="Invoices">
+          <a class="nav-link" href="membership.html" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
-            <span class="nav-text">Invoices</span>
+            <span class="nav-text">Membership fees</span>
           </a>
-          <a class="nav-link" href="matches.html" title="Customers">
+          <a class="nav-link" href="matches.html" title="Matches">
             <i class="icon bi bi-ladder" aria-hidden="true"></i>
             <span class="nav-text">Matches</span>
           </a>
         </div>
         <div class="nav-group">
-          <span class="nav-label">Operations</span>
-          <a class="nav-link" href="products.html" aria-current="page" title="Products & stock">
+          <span class="nav-label">Lead management</span>
+          <a class="nav-link" href="products.html" aria-current="page" title="Membership plans">
             <i class="icon bi bi-box-seam" aria-hidden="true"></i>
-            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a>
-          <a class="nav-link" href="tasks.html" title="Tasks">
+           <a class="nav-link" href="tasks.html" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
-            <span class="nav-text">Tasks</span>
+            <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
           </a>
           <a class="nav-link" href="calendar.html" title="Calendar">
             <i class="icon bi bi-calendar3" aria-hidden="true"></i>
-            <span class="nav-text">Calendar</span>
+            <span class="nav-text">Appointments</span>
           </a>
         </div>
         <div class="nav-group">
@@ -92,8 +92,8 @@
       <div class="sidebar-user">
         <span class="avatar tone-coral">AK</span>
         <div class="sidebar-user-info">
-          <strong>Anna Keller</strong>
-          <span>Operations manager</span>
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
         </div>
       </div>
     </aside>
@@ -136,19 +136,19 @@
                 <li>
                   <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
                       aria-hidden="true"></i></span>
-                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-mint">JM</span>
-                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-yellow">SB</span>
-                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                  <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
                 </li>
               </ul>
               <hr />
-              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
                   aria-hidden="true"></i></a>
             </div>
           </div>
@@ -156,7 +156,7 @@
           <div class="dropdown">
             <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
               <span class="avatar avatar--sm tone-coral">AK</span>
-              <span class="user-name">Anna</span>
+              <span class="user-name">Asha</span>
               <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" id="userMenu">
@@ -176,45 +176,45 @@
             <ol class="breadcrumb">
               <li><a href="index.html">Dashboard</a></li>
               <li>Operations</li>
-              <li aria-current="page">Products &amp; stock</li>
+              <li aria-current="page">Membership plans</li>
             </ol>
-            <h1>Products &amp; <span class="marker marker--green">stock</span></h1>
+            <h1><span class="marker marker--green">Membership plans</span></h1>
           </div>
           <div class="page-actions">
             <button type="button" class="btn btn--outline" data-toast="Import started" data-toast-tone="mint"><i
                 class="icon bi bi-upload" aria-hidden="true"></i> Import</button>
             <button type="button" class="btn" data-modal-open="productModal"><i class="icon bi bi-plus"
-                aria-hidden="true"></i> New product</button>
+                aria-hidden="true"></i> New membership plan</button>
           </div>
         </div>
 
         <section class="grid">
           <article class="card col-6 md-col-12">
             <div class="card-head mb-sm">
-              <h2 class="card-title">Warehouse</h2><span class="badge badge--green">Operational</span>
+              <h2 class="card-title">Membership overview</h2><span class="badge badge--green">Plans available</span>
             </div>
             <div class="progress-row">
-              <span class="progress-label">Capacity used</span><span class="progress-value">72%</span>
+              <span class="progress-label">Active plans</span><span class="progress-value">72%</span>
               <div class="progress progress--lg tone-yellow"><span style="--value: 72%"></span></div>
             </div>
             <div class="mini-stats">
-              <div><span>SKUs</span><b>940</b></div>
-              <div><span>Picks today</span><b>312</b></div>
-              <div><span>Returns</span><b>6</b></div>
+              <div><span>Plan IDs</span><b>940</b></div>
+              <div><span>Profile views today</span><b>312</b></div>
+              <div><span>Renewals due</span><b>6</b></div>
             </div>
           </article>
           <article class="card col-6 md-col-12">
             <div class="card-head mb-sm">
-              <h2 class="card-title">Warehouse B </h2><span class="badge badge--yellow">Relayout</span>
+              <h2 class="card-title">Premium plan bookings</h2><span class="badge badge--yellow">Featured plan</span>
             </div>
             <div class="progress-row">
-              <span class="progress-label">Capacity used</span><span class="progress-value">91%</span>
+              <span class="progress-label">Active plans</span><span class="progress-value">91%</span>
               <div class="progress progress--lg progress--striped tone-coral"><span style="--value: 91%"></span></div>
             </div>
             <div class="mini-stats">
-              <div><span>SKUs</span><b>480</b></div>
-              <div><span>Picks today</span><b>128</b></div>
-              <div><span>Returns</span><b>2</b></div>
+              <div><span>Plan IDs</span><b>480</b></div>
+              <div><span>Profile views today</span><b>128</b></div>
+              <div><span>Renewals due</span><b>2</b></div>
             </div>
           </article>
         </section>
@@ -222,20 +222,20 @@
         <section class="grid">
           <article class="card card--flush col-12" data-table>
             <div class="toolbar">
-              <div class="chips" role="group" aria-label="Filter by stock status">
+              <div class="chips" role="group" aria-label="Filter plans by availability">
                 <button type="button" data-filter="all" aria-pressed="true">All <em>10</em></button>
-                <button type="button" data-filter="low" aria-pressed="false">Low stock <em>5</em></button>
-                <button type="button" data-filter="out" aria-pressed="false">Out of stock <em>1</em></button>
-                <button type="button" data-filter="ok" aria-pressed="false">In stock <em>4</em></button>
+                <button type="button" data-filter="low" aria-pressed="false">Limited availability <em>5</em></button>
+                <button type="button" data-filter="out" aria-pressed="false">Fully booked <em>1</em></button>
+                <button type="button" data-filter="ok" aria-pressed="false">Available <em>4</em></button>
               </div>
             </div>
             <div class="table-wrap">
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col" data-sort="text">Product</th>
+                    <th scope="col" data-sort="text">Membership plan</th>
                     <th scope="col">Category</th>
-                    <th scope="col" data-sort="num">Stock</th>
+                    <th scope="col" data-sort="num">Availability</th>
                     <th scope="col" data-sort="num" class="text-right">Price</th>
                     <th scope="col">Status</th>
                     <th scope="col"><span class="visually-hidden">Actions</span></th>
@@ -246,227 +246,227 @@
                     <td>
                       <div class="product-cell"><span class="thumb tone-yellow"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Arc floor lamp Ã¢â‚¬â€ brass</strong><span>SKU ARC-FL-BR</span></div>
+                        <div><strong>Assisted matchmaking plan</strong><span>Plan ID PLAN-01</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Floor lamps</span></td>
+                    <td><span class="tag">Basic plans</span></td>
                     <td data-value="4">
                       <div class="stock-cell"><span><b class="num">4</b> <span class="subtle">/ 50</span></span>
                         <div class="progress tone-coral"><span style="--value: 8%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="289">$289.00</td>
-                    <td><span class="badge badge--yellow">Low stock</span></td>
+                    <td class="text-right mono" data-value="289">INR 289.00</td>
+                    <td><span class="badge badge--yellow">Limited availability</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for ARC-FL-BR" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-01" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="low">
                     <td>
                       <div class="product-cell"><span class="thumb tone-coral"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Pleated shade, linen 40 cm</strong><span>SKU PLT-SH-40</span></div>
+                        <div><strong>Basic membership plan</strong><span>Plan ID PLAN-02</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Shades</span></td>
+                    <td><span class="tag">Profile boosts</span></td>
                     <td data-value="7">
                       <div class="stock-cell"><span><b class="num">7</b> <span class="subtle">/ 50</span></span>
                         <div class="progress tone-coral"><span style="--value: 14%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="34">$34.00</td>
-                    <td><span class="badge badge--yellow">Low stock</span></td>
+                    <td class="text-right mono" data-value="34">INR 34.00</td>
+                    <td><span class="badge badge--yellow">Limited availability</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for PLT-SH-40" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-02" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="low">
                     <td>
                       <div class="product-cell"><span class="thumb tone-mint"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>E27 bulb, warm 2700K (x6)</strong><span>SKU BLB-E27-6</span></div>
+                        <div><strong>Profile verification service</strong><span>Plan ID PLAN-03</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Bulbs</span></td>
+                    <td><span class="tag">Profile verification</span></td>
                     <td data-value="44">
                       <div class="stock-cell"><span><b class="num">44</b> <span class="subtle">/ 200</span></span>
                         <div class="progress tone-yellow"><span style="--value: 22%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="18.9">$18.90</td>
-                    <td><span class="badge badge--yellow">Low stock</span></td>
+                    <td class="text-right mono" data-value="18.9">INR 18.90</td>
+                    <td><span class="badge badge--yellow">Limited availability</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for BLB-E27-6" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-03" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="low">
                     <td>
                       <div class="product-cell"><span class="thumb tone-green"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Mushroom table lamp Ã¢â‚¬â€ sage</strong><span>SKU MSH-TL-SG</span></div>
+                        <div><strong>Premium introduction plan</strong><span>Plan ID PLAN-04</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Table lamps</span></td>
+                    <td><span class="tag">Premium plans</span></td>
                     <td data-value="13">
                       <div class="stock-cell"><span><b class="num">13</b> <span class="subtle">/ 50</span></span>
                         <div class="progress tone-yellow"><span style="--value: 26%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="79.5">$79.50</td>
-                    <td><span class="badge badge--yellow">Low stock</span></td>
+                    <td class="text-right mono" data-value="79.5">INR 79.50</td>
+                    <td><span class="badge badge--yellow">Limited availability</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for MSH-TL-SG" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-04" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="low">
                     <td>
                       <div class="product-cell"><span class="thumb tone-yellow"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Textile cable, black 3 m</strong><span>SKU CBL-TX-3B</span></div>
+                        <div><strong>Profile promotion plan</strong><span>Plan ID PLAN-05</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Accessories</span></td>
+                    <td><span class="tag">Consultation services</span></td>
                     <td data-value="60">
                       <div class="stock-cell"><span><b class="num">60</b> <span class="subtle">/ 200</span></span>
                         <div class="progress tone-yellow"><span style="--value: 30%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="12">$12.00</td>
-                    <td><span class="badge badge--yellow">Low stock</span></td>
+                    <td class="text-right mono" data-value="12">INR 12.00</td>
+                    <td><span class="badge badge--yellow">Limited availability</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for CBL-TX-3B" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-05" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="ok">
                     <td>
                       <div class="product-cell"><span class="thumb tone-mint"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Globe pendant, opal 30 cm</strong><span>SKU GLB-PD-30</span></div>
+                        <div><strong>Family-assisted matchmaking plan</strong><span>Plan ID PLAN-06</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Pendants</span></td>
+                    <td><span class="tag">Assisted plans</span></td>
                     <td data-value="128">
                       <div class="stock-cell"><span><b class="num">128</b> <span class="subtle">/ 150</span></span>
                         <div class="progress tone-green"><span style="--value: 85%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="119">$119.00</td>
-                    <td><span class="badge badge--green">In stock</span></td>
+                    <td class="text-right mono" data-value="119">INR 119.00</td>
+                    <td><span class="badge badge--green">Available</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for GLB-PD-30" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-06" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="ok">
                     <td>
                       <div class="product-cell"><span class="thumb tone-coral"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Wall sconce, matte black</strong><span>SKU WSC-MB-01</span></div>
+                        <div><strong>Premium profile listing</strong><span>Plan ID PLAN-07</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Wall lights</span></td>
+                    <td><span class="tag">Family plans</span></td>
                     <td data-value="86">
                       <div class="stock-cell"><span><b class="num">86</b> <span class="subtle">/ 100</span></span>
                         <div class="progress tone-green"><span style="--value: 86%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="64">$64.00</td>
-                    <td><span class="badge badge--green">In stock</span></td>
+                    <td class="text-right mono" data-value="64">INR 64.00</td>
+                    <td><span class="badge badge--green">Available</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for WSC-MB-01" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-07" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="out">
                     <td>
                       <div class="product-cell"><span class="thumb tone-green"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Rattan pendant, natural</strong><span>SKU RTN-PD-NT</span></div>
+                        <div><strong>Personal matchmaking session</strong><span>Plan ID PLAN-08</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Pendants</span></td>
+                    <td><span class="tag">Assisted plans</span></td>
                     <td data-value="0">
                       <div class="stock-cell"><span><b class="num">0</b> <span class="subtle">/ 40</span></span>
                         <div class="progress tone-coral"><span style="--value: 2%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="149">$149.00</td>
-                    <td><span class="badge badge--coral">Out of stock</span></td>
+                    <td class="text-right mono" data-value="149">INR 149.00</td>
+                    <td><span class="badge badge--coral">Fully booked</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for RTN-PD-NT" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-08" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="ok">
                     <td>
                       <div class="product-cell"><span class="thumb tone-yellow"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Dimmer switch, inline</strong><span>SKU DIM-IN-01</span></div>
+                        <div><strong>Contact details access</strong><span>Plan ID PLAN-09</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Accessories</span></td>
+                    <td><span class="tag">Consultation services</span></td>
                     <td data-value="310">
                       <div class="stock-cell"><span><b class="num">310</b> <span class="subtle">/ 300</span></span>
                         <div class="progress tone-green"><span style="--value: 100%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="9.5">$9.50</td>
-                    <td><span class="badge badge--green">In stock</span></td>
+                    <td class="text-right mono" data-value="9.5">INR 9.50</td>
+                    <td><span class="badge badge--green">Available</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for DIM-IN-01" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-09" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                   <tr data-status="ok">
                     <td>
                       <div class="product-cell"><span class="thumb tone-mint"><i class="icon bi bi-lightbulb"
                             aria-hidden="true"></i></span>
-                        <div><strong>Desk lamp, chrome</strong><span>SKU DSK-LP-CH</span></div>
+                        <div><strong>Consultation session</strong><span>Plan ID PLAN-10</span></div>
                       </div>
                     </td>
-                    <td><span class="tag">Table lamps</span></td>
+                    <td><span class="tag">Premium plans</span></td>
                     <td data-value="57">
                       <div class="stock-cell"><span><b class="num">57</b> <span class="subtle">/ 80</span></span>
                         <div class="progress tone-green"><span style="--value: 71%"></span></div>
                       </div>
                     </td>
-                    <td class="text-right mono" data-value="98">$98.00</td>
-                    <td><span class="badge badge--green">In stock</span></td>
+                    <td class="text-right mono" data-value="98">INR 98.00</td>
+                    <td><span class="badge badge--green">Available</span></td>
                     <td class="text-right"><button type="button" class="btn btn--outline btn--sm"
-                        data-toast="Reorder draft created for DSK-LP-CH" data-toast-tone="yellow">Reorder</button></td>
+                        data-toast="Plan update saved for PLAN-10" data-toast-tone="yellow">Manage plan</button></td>
                   </tr>
                 </tbody>
               </table>
               <div class="empty-state">
-                <p>No product matches your search.</p>
+                <p>No membership plan matches your search.</p>
               </div>
             </div>
-            <div class="card-foot"><span>Showing <b data-table-count>10</b> of 1,420 products</span></div>
+            <div class="card-foot"><span>Showing <b data-table-count>10</b> of 10 plans</span></div>
           </article>
         </section>
 
         <dialog class="modal" id="productModal" aria-labelledby="productTitle">
-          <form method="dialog" data-demo-form data-toast="Product created">
+          <form method="dialog" data-demo-form data-toast="Membership plan created">
             <div class="modal-head">
-              <h2 id="productTitle">New product</h2>
+              <h2 id="productTitle">New membership plan</h2>
               <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close aria-label="Close"><i
                   class="icon bi bi-x" aria-hidden="true"></i></button>
             </div>
             <div class="form-grid">
-              <div class="field span-2"><label for="pName">Product name</label><input class="input" id="pName"
+              <div class="field span-2"><label for="pName">Membership plan name</label><input class="input" id="pName"
                   type="text" required /></div>
-              <div class="field"><label for="pSku">SKU</label><input class="input" id="pSku" type="text" required />
+              <div class="field"><label for="pSku">Plan ID</label><input class="input" id="pSku" type="text" required />
               </div>
               <div class="field"><label for="pPrice">Price</label><input class="input" id="pPrice" type="number"
                   step="0.01" min="0" required /></div>
               <div class="field"><label for="pCat">Category</label><select class="select" id="pCat">
-                  <option>Floor lamps</option>
-                  <option>Table lamps</option>
-                  <option>Pendants</option>
-                  <option>Wall lights</option>
-                  <option>Shades</option>
-                  <option>Bulbs</option>
-                  <option>Accessories</option>
+                  <option>Basic plans</option>
+                  <option>Premium plans</option>
+                  <option>Assisted plans</option>
+                  <option>Family plans</option>
+                  <option>Profile boosts</option>
+                  <option>Profile verification</option>
+                  <option>Consultation services</option>
                 </select></div>
-              <div class="field"><label for="pReorder">Reorder point</label><input class="input" id="pReorder"
+              <div class="field"><label for="pReorder">Availability limit</label><input class="input" id="pReorder"
                   type="number" min="0" value="20" /></div>
             </div>
             <div class="modal-actions">
               <button type="button" class="btn btn--ghost" data-modal-close>Cancel</button>
-              <button type="submit" class="btn">Create product</button>
+              <button type="submit" class="btn">Create plan</button>
             </div>
           </form>
         </dialog>
 
         <footer class="footer">
-          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
 
         </footer>
       </main>

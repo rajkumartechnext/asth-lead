@@ -18,6 +18,6 @@
   C.bar("#demoBar", {
     labels: months,
     values: [18, 24, 21, 30, 27, 34],
-    name: "Orders",
+    name: "Enquiries",
   });
 })();

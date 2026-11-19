@@ -12,8 +12,8 @@
   if (!C) return;
 
   /* Formats ---------------------------------------------------------------- */
-  const money = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", maximumFractionDigits: 0 });
-  const moneyCompact = new Intl.NumberFormat("en-US", { style: "currency", currency: "USD", notation: "compact", maximumFractionDigits: 1 });
+  const money = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", maximumFractionDigits: 0 });
+  const moneyCompact = new Intl.NumberFormat("en-IN", { style: "currency", currency: "INR", notation: "compact", maximumFractionDigits: 1 });
   const int = new Intl.NumberFormat("en-US");
   const fmtMoney = (v) => money.format(v);
   const fmtAxis = (v) => (v === 0 ? "0" : moneyCompact.format(v));
@@ -101,7 +101,7 @@
   const RANGES = {
     "7d": {
       series: () => dailySeries(7, 7),
-      subtitle: "Daily revenue, last 7 days",
+      subtitle: "Daily membership fees, last 7 days",
       note: "vs. previous 7 days",
       aov: 138,
       margin: 43.4,
@@ -111,7 +111,7 @@
     },
     "30d": {
       series: () => dailySeries(30, 30),
-      subtitle: "Daily revenue, last 30 days",
+      subtitle: "Daily membership fees, last 30 days",
       note: "vs. previous 30 days",
       aov: 143,
       margin: 42.8,
@@ -121,7 +121,7 @@
     },
     "90d": {
       series: () => weeklySeries(13, 90),
-      subtitle: "Weekly revenue, last 13 weeks",
+      subtitle: "Weekly membership fees, last 13 weeks",
       note: "vs. previous quarter",
       aov: 146,
       margin: 41.9,
@@ -131,7 +131,7 @@
     },
     "12m": {
       series: () => monthlySeries(12, 12),
-      subtitle: "Monthly revenue, last 12 months",
+      subtitle: "Monthly membership fees, last 12 months",
       note: "vs. previous 12 months",
       aov: 151,
       margin: 41.2,
@@ -145,10 +145,10 @@
   const LOWER_IS_BETTER = new Set(["outstanding"]);
 
   const CHANNELS = [
-    { label: "Online store", color: "--coral" },
-    { label: "Wholesale", color: "--yellow" },
-    { label: "Retail shops", color: "--green" },
-    { label: "Marketplaces", color: "--mint" },
+    { label: "Website", color: "--coral" },
+    { label: "Referrals", color: "--yellow" },
+    { label: "Events", color: "--green" },
+    { label: "Social media", color: "--mint" },
   ];
 
   /* Rendu ------------------------------------------------------------------ */
@@ -225,7 +225,7 @@
     setText("[data-rev-total]", fmtMoney(total));
     setText("[data-rev-best]", `${long[bestIndex]} · ${fmtMoney(values[bestIndex])}`);
     const barOptions = {
-      labels, values, tooltipLabels: long, name: "Revenue",
+      labels, values, tooltipLabels: long, name: "Membership fees",
       format: fmtMoney, axisFormat: fmtAxis, highlight: values.length - 1, accent: "--coral",
     };
     if (revenueChart) revenueChart.update(barOptions);
@@ -234,7 +234,7 @@
     // Vue tableau (accessibilité)
     const tableView = document.getElementById("revTable");
     if (tableView) {
-      tableView.innerHTML = `<table class="table table--compact"><thead><tr><th scope="col">Period</th><th scope="col" class="text-right">Revenue</th></tr></thead><tbody>${values
+      tableView.innerHTML = `<table class="table table--compact"><thead><tr><th scope="col">Period</th><th scope="col" class="text-right">Membership fees</th></tr></thead><tbody>${values
         .map((v, i) => `<tr><td>${long[i]}</td><td class="text-right mono">${fmtMoney(v)}</td></tr>`)
         .join("")}</tbody></table>`;
     }
@@ -305,7 +305,7 @@
       ],
       tooltipExtra: (i) => {
         const net = cashIn[i] - cashOut[i];
-        return `<div class="tt-row" style="margin-top:.25rem;padding-top:.25rem;border-top:1px solid #333"><span>Net</span><b>${net >= 0 ? "+" : "−"}${fmtMoney(Math.abs(net))}</b></div>`;
+        return `<div class="tt-row" style="margin-top:.25rem;padding-top:.25rem;border-top:1px solid #333"><span>Net fees</span><b>${net >= 0 ? "+" : "−"}${fmtMoney(Math.abs(net))}</b></div>`;
       },
     });
   })();

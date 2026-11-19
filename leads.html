@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Profiles | Astha Marriage Bureau</title>
+  <meta name="description" content="Lead and member profile directory with search, status filters, sorting and bulk actions." />
+  <meta name="theme-color" content="#0e0e0e" />
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+<body>
+ 
+
+  <div class="app" id="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+ <img src="images/logo.png" alt="">
+      </a>
+      <a href="index.html" class="brand sidebar-close">
+        <img src="images/logo-1.png" alt="">
+      </a>
+
+      <nav aria-label="Sections">
+        <div class="nav-group">
+          <span class="nav-label">Overview</span>
+          <a class="nav-link" href="index.html" title="Dashboard">
+            <i class="icon bi bi-house" aria-hidden="true"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </div>
+        <div class="nav-group">
+         
+          <a class="nav-link" href="members.html" aria-current="page" title="Leads">
+            <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+            <span class="nav-text">Leads</span>
+            <span class="nav-count">12</span>
+          </a>
+          <a class="nav-link" href="membership.html" title="Membership fees">
+            <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+            <span class="nav-text">Membership fees</span>
+          </a>
+          <a class="nav-link" href="matches.html" title="Matches">
+            <i class="icon bi bi-ladder" aria-hidden="true"></i>
+            <span class="nav-text">Matches</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Lead management</span>
+          <!-- <a class="nav-link" href="products.html" title="Membership plans">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Membership plans</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+           <a class="nav-link" href="tasks.html" title="Tasks">
+            <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+            <span class="nav-text">Task</span>
+            <span class="nav-count">8</span>
+          </a>
+        <a class="nav-link" href="calendar.html" title="Calendar">
+            <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+            <span class="nav-text">Appointments</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Workspace</span>
+          <a class="nav-link" href="settings.html" title="Settings">
+            <i class="icon bi bi-sliders" aria-hidden="true"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+          <a class="nav-link" href="roles-permissions.html"><i class="icon bi bi-lock"
+              aria-hidden="true"></i><span class="nav-text">Roles &amp; permissions</span></a>
+          
+        
+      </nav>
+
+      
+
+      <div class="sidebar-user">
+        <span class="avatar tone-coral">AK</span>
+        <div class="sidebar-user-info">
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <div class="main">
+
+      <header class="topbar">
+        <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open aria-controls="sidebar" aria-expanded="false">
+          <i class="icon bi bi-list" aria-hidden="true"></i>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+        
+        <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse aria-controls="sidebar" aria-pressed="false">
+          <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+          <span class="visually-hidden">Collapse sidebar</span>
+        </button>
+
+
+        <div class="topbar-actions">
+                    <a href="massege.html">
+                        <button type="button" class="icon-btn" aria-pressed="false">
+                            <div class="under-msg" aria-hidden="true">4</div>
+                            <i class="bi bi-messenger"></i>
+                        </button>
+                    </a>
+         
+
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown aria-expanded="false" aria-controls="notifMenu">
+              <i class="icon bi bi-bell" aria-hidden="true"></i>
+              <span class="ping" aria-hidden="true"></span>
+              <span class="visually-hidden">Notifications (3 unread)</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+              <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+              <ul class="notif-list" role="list">
+                <li>
+                  <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle" aria-hidden="true"></i></span>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-mint">JM</span>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-yellow">SB</span>
+                  <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
+                </li>
+              </ul>
+              <hr />
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right" aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
+              <span class="avatar avatar--sm tone-coral">AK</span>
+              <span class="user-name">Asha</span>
+              <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" id="userMenu">
+              <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i> Profile</a>
+              <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i> Settings</a>
+              
+              <hr />
+              <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <div class="page-head">
+          <div>
+            <ol class="breadcrumb"><li><a href="index.html">Dashboard</a></li><li aria-current="page">Leads</li></ol>
+            <h1> <span class="marker marker--coral">Leads</span></h1>
+          </div>
+          <div class="page-actions">
+            <button type="button" class="btn btn--outline" data-toast="Member profiles exported as CSV" data-toast-tone="mint"><i class="icon bi bi-download" aria-hidden="true"></i> Export</button>
+            <button type="button" class="btn" data-modal-open="newOrderModal"><i class="icon bi bi-plus" aria-hidden="true"></i> New enquiry</button>
+          </div>
+        </div>
+
+        <section class="grid" aria-label="Lead summary">
+          <article class="card kpi col-3 md-col-6">
+            <span class="kpi-label"><span class="dot tone-yellow"></span> Open leads</span>
+            <div class="kpi-value">128</div>
+            <span class="kpi-note">128 active enquiries</span>
+          </article>
+          <article class="card kpi col-3 md-col-6">
+            <span class="kpi-label"><span class="dot tone-mint"></span> Qualified</span>
+            <div class="kpi-value">34</div>
+            <div class="progress progress--thin tone-mint"><span style="--value: 62%"></span></div>
+          </article>
+          <article class="card kpi col-3 md-col-6">
+            <span class="kpi-label"><span class="dot tone-green"></span> Successful matches</span>
+            <div class="kpi-value">96.2%</div>
+            <span class="kpi-note">Target 95% - last 30 days</span>
+          </article>
+          <article class="card kpi col-3 md-col-6">
+            <span class="kpi-label"><span class="dot tone-coral"></span> Follow-ups needing attention</span>
+            <div class="kpi-value">7</div>
+            <span class="kpi-note">7 follow-ups overdue</span>
+          </article>
+        </section>
+
+        <section class="grid">
+          <article class="card card--flush col-12" data-table>
+            <div class="toolbar">
+              <div class="chips" role="group" aria-label="Filter by status">
+                <button type="button" data-filter="all" aria-pressed="true">All <em>12</em></button>
+                <button type="button" data-filter="processing" aria-pressed="false">Contacted <em>2</em></button>
+                <button type="button" data-filter="ready" aria-pressed="false">Qualified <em>2</em></button>
+                <button type="button" data-filter="shipped" aria-pressed="false">Converted <em>5</em></button>
+                <button type="button" data-filter="failed" aria-pressed="false">Needs follow-up <em>2</em></button>
+                <button type="button" data-filter="draft" aria-pressed="false">New <em>1</em></button>
+              </div>
+            </div>
+
+            <div class="toolbar toolbar--bulk" data-bulk hidden>
+              <strong><span data-selected-count>0</span> selected</strong>
+              <div class="toolbar-end">
+                <button type="button" class="btn btn--outline btn--sm" data-toast="Profile summaries generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile summaries</button>
+                <button type="button" class="btn btn--outline btn--sm" data-toast="Profiles marked as qualified"><i class="icon icon--sm bi bi-truck" aria-hidden="true"></i> Mark qualified</button>
+                <button type="button" class="btn btn--danger btn--sm" data-toast="Profiles archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button>
+              </div>
+            </div>
+
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col" class="col-check"><label class="checkbox"><input type="checkbox" data-select-all aria-label="Select all profiles" /><i class="bi bi-check" aria-hidden="true"></i></label></th>
+                    <th scope="col" data-sort="text">Lead ID</th>
+                    <th scope="col" data-sort="text">Profile</th>
+                    <th scope="col" data-sort="text">Added</th>
+                    <th scope="col" data-sort="num">Matches</th>
+                    <th scope="col">Source</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" data-sort="num" class="text-right">Membership fee</th>
+                    <th scope="col"><span class="visually-hidden">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr data-status="shipped">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4821" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4821</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">GM</span><div><strong>Aditi Mukherjee</strong><span>Durgapur, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                    <td class="num">24</td>
+                    <td>Phone</td>
+                    <td><span class="badge badge--green">Matched</span></td>
+                    <td class="text-right mono" data-value="8420.0">INR 8,420.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4821" aria-label="Actions for LEAD-4821"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4821"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4821 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4821 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4821 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="processing">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4820" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4820</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">NH</span><div><strong>Riya Banerjee</strong><span>Kolkata, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                    <td class="num">6</td>
+                    <td>Email</td>
+                    <td><span class="badge badge--yellow">Contacted</span></td>
+                    <td class="text-right mono" data-value="1935.5">INR 1,935.50</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4820" aria-label="Actions for LEAD-4820"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4820"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4820 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4820 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4820 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="failed">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4819" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4819</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span><div><strong>Kavita Das</strong><span>Asansol, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                    <td class="num">2</td>
+                    <td>Phone</td>
+                    <td><span class="badge badge--coral">Needs follow-up</span></td>
+                    <td class="text-right mono" data-value="489.0">INR 489.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4819" aria-label="Actions for LEAD-4819"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4819"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4819 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4819 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4819 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="ready">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4818" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4818</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">CA</span><div><strong>Priyanka Sen</strong><span>Howrah, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 28, 2026">Sep 28, 2026</td>
+                    <td class="num">12</td>
+                    <td>Email</td>
+                    <td><span class="badge badge--mint">Qualified</span></td>
+                    <td class="text-right mono" data-value="3112.8">INR 3,112.80</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4818" aria-label="Actions for LEAD-4818"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4818"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4818 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4818 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4818 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="draft">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4817" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4817</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm">OW</span><div><strong>Arjun Dutta</strong><span>Siliguri, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 28, 2026">Sep 28, 2026</td>
+                    <td class="num">40</td>
+                    <td>-</td>
+                    <td><span class="badge">Draft</span></td>
+                    <td class="text-right mono" data-value="12760.0">INR 12,760.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4817" aria-label="Actions for LEAD-4817"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4817"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4817 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4817 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4817 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="shipped">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4816" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4816</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">AM</span><div><strong>Arpita Manna</strong><span>Kolkata, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 27, 2026">Sep 27, 2026</td>
+                    <td class="num">9</td>
+                    <td>Phone</td>
+                    <td><span class="badge badge--green">Matched</span></td>
+                    <td class="text-right mono" data-value="2240.0">INR 2,240.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4816" aria-label="Actions for LEAD-4816"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4816"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4816 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4816 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4816 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="shipped">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4815" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4815</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">HH</span><div><strong>Sohini Paul</strong><span>Bardhaman, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 27, 2026">Sep 27, 2026</td>
+                    <td class="num">18</td>
+                    <td>Email</td>
+                    <td><span class="badge badge--green">Matched</span></td>
+                    <td class="text-right mono" data-value="5480.4">INR 5,480.40</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4815" aria-label="Actions for LEAD-4815"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4815"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4815 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4815 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4815 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="processing">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4814" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4814</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">AR</span><div><strong>Anirban Bose</strong><span>Kharagpur, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 26, 2026">Sep 26, 2026</td>
+                    <td class="num">3</td>
+                    <td>Phone</td>
+                    <td><span class="badge badge--yellow">Contacted</span></td>
+                    <td class="text-right mono" data-value="720.0">INR 720.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4814" aria-label="Actions for LEAD-4814"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4814"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4814 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4814 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4814 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="ready">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4813" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4813</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">LM</span><div><strong>Moumita Ghosh</strong><span>Bankura, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 26, 2026">Sep 26, 2026</td>
+                    <td class="num">30</td>
+                    <td>Email</td>
+                    <td><span class="badge badge--mint">Qualified</span></td>
+                    <td class="text-right mono" data-value="9875.0">INR 9,875.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4813" aria-label="Actions for LEAD-4813"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4813"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4813 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4813 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4813 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="shipped">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4812" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4812</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">LR</span><div><strong>Subhajit Roy</strong><span>Burdwan, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 25, 2026">Sep 25, 2026</td>
+                    <td class="num">7</td>
+                    <td>Walk-in</td>
+                    <td><span class="badge badge--green">Matched</span></td>
+                    <td class="text-right mono" data-value="1610.9">INR 1,610.90</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4812" aria-label="Actions for LEAD-4812"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4812"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4812 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4812 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4812 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="failed">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4811" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4811</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span><div><strong>Kavita Das</strong><span>Asansol, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 25, 2026">Sep 25, 2026</td>
+                    <td class="num">4</td>
+                    <td>Phone</td>
+                    <td><span class="badge badge--coral">Needs follow-up</span></td>
+                    <td class="text-right mono" data-value="935.0">INR 935.00</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4811" aria-label="Actions for LEAD-4811"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4811"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4811 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4811 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4811 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                  <tr data-status="shipped">
+                    <td class="col-check"><label class="checkbox"><input type="checkbox" aria-label="Select lead LEAD-4810" /><i class="bi bi-check" aria-hidden="true"></i></label></td>
+                    <td class="mono">#LEAD-4810</td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">CA</span><div><strong>Priyanka Sen</strong><span>Howrah, West Bengal</span></div></div></td>
+                    <td class="nowrap" data-value="Sep 24, 2026">Sep 24, 2026</td>
+                    <td class="num">16</td>
+                    <td>Email</td>
+                    <td><span class="badge badge--green">Matched</span></td>
+                    <td class="text-right mono" data-value="4302.6">INR 4,302.60</td>
+                    <td class="text-right"><div class="dropdown"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4810" aria-label="Actions for LEAD-4810"><i class="icon bi bi-three-dots" aria-hidden="true"></i></button><div class="dropdown-menu" id="menu-LEAD-4810"><a href="invoice.html"><i class="icon icon--sm bi bi-file-earmark-text" aria-hidden="true"></i> View invoice</a><button type="button" data-toast="Profile card for LEAD-4810 generated" data-toast-tone="mint"><i class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile card</button><button type="button" data-toast="LEAD-4810 duplicated as a draft"><i class="icon icon--sm bi bi-clipboard" aria-hidden="true"></i> Duplicate</button><hr /><button type="button" data-toast="LEAD-4810 archived" data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i> Archive</button></div></div></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="empty-state">
+                <span class="sticker tone-yellow mb-sm">No profiles found</span>
+                <p>No lead matches your search. Try another keyword or status.</p>
+              </div>
+            </div>
+
+            <div class="card-foot">
+              <span>Showing <b data-table-count>12</b> of 1,286 leads</span>
+              <nav class="pagination" aria-label="Pagination">
+                <button type="button" disabled aria-label="Previous page"><i class="icon icon--sm bi bi-chevron-left" aria-hidden="true"></i></button>
+                <button type="button" aria-current="page">1</button>
+                <button type="button">2</button>
+                <button type="button">3</button>
+                <span class="subtle">-</span>
+                <button type="button">108</button>
+                <button type="button" aria-label="Next page"><i class="icon icon--sm bi bi-chevron-right" aria-hidden="true"></i></button>
+              </nav>
+            </div>
+          </article>
+        </section>
+
+        <dialog class="modal" id="newOrderModal" aria-labelledby="newOrderTitle">
+          <form method="dialog" data-demo-form data-toast="Lead #SO-4822 created">
+            <div class="modal-head">
+              <div>
+                <span class="sticker tone-yellow mb-2xs">Quick lead entry</span>
+                <h2 id="newOrderTitle">New enquiry</h2>
+              </div>
+              <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close aria-label="Close"><i class="icon bi bi-x" aria-hidden="true"></i></button>
+            </div>
+            <div class="form-grid">
+              <div class="field span-2">
+                <label for="noCustomer">Member profile</label>
+                <select class="select" id="noCustomer" required>
+                  <option value="">Choose a member profile-</option>
+                  <option>Aditi Mukherjee</option>
+                  <option>Riya Banerjee</option>
+                  <option>Kavita Das</option>
+                  <option>Priyanka Sen</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="noDate">Next follow-up date</label>
+                <input class="input" id="noDate" type="date" required />
+              </div>
+              <div class="field">
+                <label for="noWarehouse">Lead source</label>
+                <select class="select" id="noWarehouse">
+                  <option>Website</option>
+                  <option>Referral</option>
+                </select>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn--ghost" data-modal-close>Cancel</button>
+              <button type="submit" class="btn">Create lead</button>
+            </div>
+          </form>
+        </dialog>
+
+        <footer class="footer">
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
+          
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+<!-- Mirrored from https://trombone-e372bc.gitlab.io/Leads.html by HTTrack Website Copier/3.x [XR&CO], Wed, 18 Nov 2026 11:37:41 GMT -->
+</html>

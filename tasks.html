@@ -6,11 +6,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tasks ‚ Trombone Admin</title>
-  <meta name="description" content="Kanban task board with drag and drop, progress bars, priorities and assignees." />
+  <title>Follow-up Tasks | Astha Marriage Bureau</title>
+  <meta name="description" content="Team follow-up board with progress, priorities and assigned consultants." />
   <meta name="theme-color" content="#0e0e0e" />
 
-  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -46,35 +46,35 @@
         </div>
         <div class="nav-group">
 
-          <a class="nav-link" href="members.html" title="Orders">
+          <a class="nav-link" href="leads.html" title="Leads">
             <i class="icon bi bi-person-plus" aria-hidden="true"></i>
-            <span class="nav-text">Members</span>
+            <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
-          <a class="nav-link" href="invoices.html" title="Invoices">
+          <a class="nav-link" href="membership.html" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
-            <span class="nav-text">Invoices</span>
+            <span class="nav-text">Membership fees</span>
           </a>
-          <a class="nav-link" href="matches.html" title="Customers">
+          <a class="nav-link" href="matches.html" title="Matches">
             <i class="icon bi bi-ladder" aria-hidden="true"></i>
             <span class="nav-text">Matches</span>
           </a>
         </div>
         <div class="nav-group">
-          <span class="nav-label">Operations</span>
-          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+          <span class="nav-label">Lead management</span>
+          <!-- <a class="nav-link" href="products.html" title="Membership plans">
             <i class="icon bi bi-box-seam" aria-hidden="true"></i>
-            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a> -->
           <a class="nav-link" href="tasks.html" aria-current="page" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
-            <span class="nav-text">Tasks</span>
+            <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
           </a>
           <a class="nav-link" href="calendar.html" title="Calendar">
             <i class="icon bi bi-calendar3" aria-hidden="true"></i>
-            <span class="nav-text">Calendar</span>
+            <span class="nav-text">Appointments</span>
           </a>
         </div>
         <div class="nav-group">
@@ -92,8 +92,8 @@
       <div class="sidebar-user">
         <span class="avatar tone-coral">AK</span>
         <div class="sidebar-user-info">
-          <strong>Anna Keller</strong>
-          <span>Operations manager</span>
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
         </div>
       </div>
     </aside>
@@ -136,19 +136,19 @@
                 <li>
                   <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
                       aria-hidden="true"></i></span>
-                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-mint">JM</span>
-                  <div><strong>Jules</strong> moved ‚¬Å“Supplier audit‚¬Â to Review<time>32 min ago</time></div>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-yellow">SB</span>
-                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                  <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
                 </li>
               </ul>
               <hr />
-              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
                   aria-hidden="true"></i></a>
             </div>
           </div>
@@ -156,7 +156,7 @@
           <div class="dropdown">
             <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
               <span class="avatar avatar--sm tone-coral">AK</span>
-              <span class="user-name">Anna</span>
+              <span class="user-name">Asha</span>
               <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" id="userMenu">
@@ -178,7 +178,7 @@
               <li>Operations</li>
               <li aria-current="page">Tasks</li>
             </ol>
-            <h1>Team <span class="marker marker--coral">tasks</span></h1>
+            <h1>Team <span class="marker marker--coral">follow-ups</span></h1>
           </div>
           <div class="page-actions">
             <button type="button" class="btn" data-modal-open="taskModal"><i class="icon bi bi-plus"
@@ -190,8 +190,8 @@
           <article class="card col-8 lg-col-12">
             <div class="card-head mb-sm">
               <div>
-                <h2 class="card-title">Sprint 38 · Sep 22 ‚ Oct 5</h2>
-                <p class="card-subtitle">10 tasks · 6 days left</p>
+                <h2 class="card-title">Lead management cycle - Sep 22 - Oct 5</h2>
+                <p class="card-subtitle">10 tasks - 6 days left</p>
               </div>
               <span class="sticker tone-yellow" style="--tilt: 3deg">On track</span>
             </div>
@@ -202,16 +202,16 @@
               <span class="tone-green" style="--w: 2"></span>
             </div>
             <ul class="legend mt-2xs" role="list">
-              <li><span class="dot dot--square" style="--tone: var(--color-surface-3)"></span> To do · 3</li>
-              <li><span class="dot dot--square tone-yellow"></span> In progress · 3</li>
-              <li><span class="dot dot--square tone-coral"></span> Review · 2</li>
-              <li><span class="dot dot--square tone-green"></span> Done · 2</li>
+              <li><span class="dot dot--square" style="--tone: var(--color-surface-3)"></span> To do - 3</li>
+              <li><span class="dot dot--square tone-yellow"></span> In progress - 3</li>
+              <li><span class="dot dot--square tone-coral"></span> Review - 2</li>
+              <li><span class="dot dot--square tone-green"></span> Done - 2</li>
             </ul>
           </article>
           <article class="card col-4 lg-col-12">
             <div class="goal">
               <div class="ring tone-green" style="--value: 57"><span>57%</span></div>
-              <div><strong>Sprint completion</strong><span>Weighted by effort</span></div>
+              <div><strong>Cycle completion</strong><span>Weighted by effort</span></div>
             </div>
           </article>
         </section>
@@ -220,9 +220,9 @@
           <section class="board-col" data-col="To do" data-tone="green" aria-label="To do">
             <header class="board-head"><span class="dot tone-ink"></span> To do <span class="count">3</span></header>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--yellow">Marketing</span><span
+              <div class="cluster justify-between"><span class="badge badge--yellow">Outreach</span><span
                   class="priority" data-level="1" title="Priority 1 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Prepare Q4 promo calendar</h3>
+              <h3>Plan the upcoming matchmaking campaign</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">0%</span>
                 <div class="progress progress--thin tone-yellow"><span style="--value: 0%"></span></div>
@@ -235,9 +235,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--mint">Logistics</span><span
+              <div class="cluster justify-between"><span class="badge badge--mint">Profile coordination</span><span
                   class="priority" data-level="2" title="Priority 2 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Update carrier rates in ERP</h3>
+              <h3>Update the lead follow-up schedule</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">0%</span>
                 <div class="progress progress--thin tone-mint"><span style="--value: 0%"></span></div>
@@ -250,9 +250,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--green">Purchasing</span><span
+              <div class="cluster justify-between"><span class="badge badge--green">Profile Coordinator</span><span
                   class="priority" data-level="1" title="Priority 1 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Collect supplier certificates</h3>
+              <h3>Verify new member profiles</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">0%</span>
                 <div class="progress progress--thin tone-green"><span style="--value: 0%"></span></div>
@@ -271,9 +271,9 @@
             <header class="board-head"><span class="dot tone-yellow"></span> In progress <span class="count">3</span>
             </header>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--coral">Finance</span><span class="priority"
+              <div class="cluster justify-between"><span class="badge badge--coral">Membership billing</span><span class="priority"
                   data-level="3" title="Priority 3 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Reconcile August bank statements</h3>
+              <h3>Follow up with inactive enquiries</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">75%</span>
                 <div class="progress progress--thin tone-coral"><span style="--value: 75%"></span></div>
@@ -286,9 +286,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--mint">Inventory</span><span
+              <div class="cluster justify-between"><span class="badge badge--mint">Member profiles</span><span
                   class="priority" data-level="2" title="Priority 2 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Count stock in warehouse B</h3>
+              <h3>Review incomplete member profiles</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">55%</span>
                 <div class="progress progress--thin tone-mint"><span style="--value: 55%"></span></div>
@@ -302,9 +302,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--yellow">Sales</span><span class="priority"
+              <div class="cluster justify-between"><span class="badge badge--yellow">Lead management</span><span class="priority"
                   data-level="3" title="Priority 3 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Send Q4 price list to wholesalers</h3>
+              <h3>Contact new matchmaking enquiries</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">40%</span>
                 <div class="progress progress--thin tone-yellow"><span style="--value: 40%"></span></div>
@@ -322,9 +322,9 @@
           <section class="board-col" data-col="Review" data-tone="coral" aria-label="Review">
             <header class="board-head"><span class="dot tone-coral"></span> Review <span class="count">2</span></header>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--green">Purchasing</span><span
+              <div class="cluster justify-between"><span class="badge badge--green">Profile Coordinator</span><span
                   class="priority" data-level="2" title="Priority 2 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Supplier audit ‚ Ferro Lighting</h3>
+              <h3>Review member profile matches</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">90%</span>
                 <div class="progress progress--thin tone-green"><span style="--value: 90%"></span></div>
@@ -338,9 +338,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--coral">Finance</span><span class="priority"
+              <div class="cluster justify-between"><span class="badge badge--coral">Membership billing</span><span class="priority"
                   data-level="1" title="Priority 1 of 3"><i></i><i></i><i></i></span></div>
-              <h3>New invoice template</h3>
+              <h3>Prepare membership renewal reminders</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">80%</span>
                 <div class="progress progress--thin tone-coral"><span style="--value: 80%"></span></div>
@@ -358,9 +358,9 @@
           <section class="board-col" data-col="Done" data-tone="green" aria-label="Done">
             <header class="board-head"><span class="dot tone-green"></span> Done <span class="count">2</span></header>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--green">Purchasing</span><span
+              <div class="cluster justify-between"><span class="badge badge--green">Profile Coordinator</span><span
                   class="priority" data-level="2" title="Priority 2 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Approve purchase order PO-311</h3>
+              <h3>Confirm upcoming member introductions</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">100%</span>
                 <div class="progress progress--thin tone-green"><span style="--value: 100%"></span></div>
@@ -373,9 +373,9 @@
               </div>
             </article>
             <article class="task-card">
-              <div class="cluster justify-between"><span class="badge badge--yellow">HR</span><span class="priority"
+              <div class="cluster justify-between"><span class="badge badge--yellow">Member onboarding</span><span class="priority"
                   data-level="1" title="Priority 1 of 3"><i></i><i></i><i></i></span></div>
-              <h3>Onboard new sales rep</h3>
+              <h3>Complete new lead onboarding</h3>
               <div class="progress-row">
                 <span class="subtle text-xs">Progress</span><span class="progress-value text-xs">100%</span>
                 <div class="progress progress--thin tone-yellow"><span style="--value: 100%"></span></div>
@@ -393,7 +393,7 @@
         </div>
 
         <dialog class="modal" id="taskModal" aria-labelledby="taskTitle">
-          <form method="dialog" data-demo-form data-toast="Task created">
+          <form method="dialog" data-demo-form data-toast="Follow-up task created">
             <div class="modal-head">
               <h2 id="taskTitle">New task</h2>
               <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close aria-label="Close"><i
@@ -403,10 +403,10 @@
               <div class="field span-2"><label for="tTitle">Title</label><input class="input" id="tTitle" type="text"
                   required /></div>
               <div class="field"><label for="tAssignee">Assignee</label><select class="select" id="tAssignee">
-                  <option>Anna Keller</option>
-                  <option>Jules Martin</option>
-                  <option>Sofia Benali</option>
-                  <option>Noah Petit</option>
+                  <option>Asha Sen</option>
+                  <option>Rahul Das</option>
+                  <option>Priya Roy</option>
+                  <option>Ananya Ghosh</option>
                 </select></div>
               <div class="field"><label for="tDue">Due date</label><input class="input" id="tDue" type="date" /></div>
               <div class="field span-2"><label for="tDesc">Description</label><textarea class="textarea"
@@ -420,7 +420,7 @@
         </dialog>
 
         <footer class="footer">
-          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
 
         </footer>
       </main>

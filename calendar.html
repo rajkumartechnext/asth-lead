@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Calendar Ã¢â‚¬â€ Trombone Admin</title>
+  <title>Appointments | Astha Marriage Bureau</title>
   <meta name="theme-color" content="#0e0e0e" />
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -37,14 +37,14 @@
         </div>
         <div class="nav-group">
 
-          <a class="nav-link" href="members.html" title="Orders">
+          <a class="nav-link" href="leads.html" title="Leads">
             <i class="icon bi bi-person-plus" aria-hidden="true"></i>
-            <span class="nav-text">Members</span>
+            <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
-          <a class="nav-link" href="invoices.html" title="Invoices">
+          <a class="nav-link" href="membership.html" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
-            <span class="nav-text">Invoices</span>
+            <span class="nav-text">Membership fees</span>
           </a>
           <a class="nav-link" href="matches.html" title="Matches">
             <i class="icon bi bi-ladder" aria-hidden="true"></i>
@@ -52,20 +52,20 @@
           </a>
         </div>
         <div class="nav-group">
-          <span class="nav-label">Operations</span>
-          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+          <span class="nav-label">Lead management</span>
+          <!-- <a class="nav-link" href="products.html" title="Membership plans">
             <i class="icon bi bi-box-seam" aria-hidden="true"></i>
-            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a> -->
-          <a class="nav-link" href="tasks.html" title="Tasks">
+           <a class="nav-link" href="tasks.html" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
-            <span class="nav-text">Tasks</span>
+            <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
           </a>
         <a class="nav-link" href="calendar.html" title="Calendar" aria-current="page" >
             <i class="icon bi bi-calendar3" aria-hidden="true"></i>
-            <span class="nav-text">Calendar</span>
+            <span class="nav-text">Appointments</span>
           </a>
         </div>
         <div class="nav-group">
@@ -85,8 +85,8 @@
       <div class="sidebar-user">
         <span class="avatar tone-coral">AK</span>
         <div class="sidebar-user-info">
-          <strong>Anna Keller</strong>
-          <span>Operations manager</span>
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
         </div>
       </div>
     </aside>
@@ -127,19 +127,19 @@
                 <li>
                   <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
                       aria-hidden="true"></i></span>
-                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-mint">JM</span>
-                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-yellow">SB</span>
-                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                  <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
                 </li>
               </ul>
               <hr />
-              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
                   aria-hidden="true"></i></a>
             </div>
           </div>
@@ -147,7 +147,7 @@
           <div class="dropdown">
             <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
               <span class="avatar avatar--sm tone-coral">AK</span>
-              <span class="user-name">Anna</span>
+              <span class="user-name">Asha</span>
               <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" id="userMenu">
@@ -172,7 +172,7 @@
             <h1>Team <span class="marker marker--yellow">calendar</span></h1>
           </div>
           <div class="page-actions"><button type="button" class="btn" data-modal-open="eventModal"><i
-                class="icon bi bi-plus" aria-hidden="true"></i> New event</button></div>
+                class="icon bi bi-plus" aria-hidden="true"></i> New appointment</button></div>
         </div>
 
         <div class="calendar-toolbar">
@@ -185,7 +185,7 @@
             <h2 class="calendar-toolbar__title" data-calendar-title></h2>
           </div>
           <div class="calendar-toolbar__right">
-            <div class="segmented" aria-label="Calendar view">
+            <div class="segmented" aria-label="Appointments view">
               <button type="button" aria-pressed="true" data-calendar-view="month">Month</button>
               <button type="button" aria-pressed="false" data-calendar-view="agenda">Agenda</button>
             </div>
@@ -204,18 +204,18 @@
             <div class="card agenda-card">
               <div class="card-head">
                 <div>
-                  <h2 class="card-title">Upcoming</h2>
+                  <h2 class="card-title">Upcoming appointments</h2>
                   <p class="card-subtitle">Next 7 days</p>
                 </div>
               </div>
               <div class="agenda-date"><span class="agenda-date__number">18</span>
-                <div class="agenda-date__info"><strong>Product sync</strong><span>10:30 · Product team</span></div>
+                <div class="agenda-date__info"><strong>Matchmaking team meeting</strong><span>10:30 - Matchmaking team</span></div>
               </div>
               <div class="agenda-date"><span class="agenda-date__number">20</span>
-                <div class="agenda-date__info"><strong>Campaign launch</strong><span>09:00 · Marketing</span></div>
+                <div class="agenda-date__info"><strong>Matchmaking campaign</strong><span>09:00 - Outreach</span></div>
               </div>
               <div class="agenda-date"><span class="agenda-date__number">23</span>
-                <div class="agenda-date__info"><strong>Stock audit</strong><span>13:00 · Operations</span></div>
+                <div class="agenda-date__info"><strong>Profile verification session</strong><span>13:00 - Profile coordination</span></div>
               </div>
               <a class="link mt-sm" href="#main-content">View full schedule</a>
             </div>
@@ -225,11 +225,11 @@
         <dialog class="modal" id="eventModal" aria-labelledby="eventModalTitle">
           <form method="dialog" data-demo-form data-toast="Event created">
             <div class="modal-head">
-              <h2 id="eventModalTitle">New event</h2><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+              <h2 id="eventModalTitle">New appointment</h2><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
                 data-modal-close><i class="icon bi bi-x" aria-hidden="true"></i></button>
             </div>
             <div class="form-grid">
-              <div class="field span-2"><label for="eventTitle">Event title</label><input class="input" id="eventTitle"
+              <div class="field span-2"><label for="eventTitle">Appointment title</label><input class="input" id="eventTitle"
                   type="text" required /></div>
               <div class="field"><label for="eventDate">Date</label><input class="input" id="eventDate" type="date" />
               </div>
@@ -237,16 +237,16 @@
               </div>
               <div class="field span-2"><label for="eventType">Team</label><select class="select" id="eventType">
                   <option>Operations</option>
-                  <option>Finance</option>
-                  <option>Sales</option>
-                  <option>Marketing</option>
+                  <option>Membership billing</option>
+                  <option>Lead management</option>
+                  <option>Outreach</option>
                 </select></div>
             </div>
             <div class="modal-actions"><button type="button" class="btn btn--ghost"
-                data-modal-close>Cancel</button><button type="submit" class="btn">Create event</button></div>
+                data-modal-close>Cancel</button><button type="submit" class="btn">Create appointment</button></div>
           </form>
         </dialog>
-        <footer class="footer"><span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+        <footer class="footer"><span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
         </footer>
       </main>
     </div>

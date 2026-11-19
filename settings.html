@@ -6,12 +6,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Settings Ã¢â‚¬â€ Trombone Admin</title>
-  <meta name="description" content="Company, profile, notifications, team and billing settings with tabs." />
+  <title>Bureau Settings | Astha Marriage Bureau</title>
+  <meta name="description" content="Bureau profile, consultant accounts, notifications and membership billing settings." />
   <meta name="theme-color" content="#0e0e0e" />
 
 
-  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link
@@ -47,35 +47,35 @@
         </div>
         <div class="nav-group">
 
-          <a class="nav-link" href="members.html" title="Orders">
+          <a class="nav-link" href="leads.html" title="Leads">
             <i class="icon bi bi-person-plus" aria-hidden="true"></i>
-            <span class="nav-text">Members</span>
+            <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
-          <a class="nav-link" href="invoices.html" title="Invoices">
+          <a class="nav-link" href="membership.html" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
-            <span class="nav-text">Invoices</span>
+            <span class="nav-text">Membership fees</span>
           </a>
-          <a class="nav-link" href="matches.html" title="Customers">
+          <a class="nav-link" href="matches.html" title="Matches">
             <i class="icon bi bi-ladder" aria-hidden="true"></i>
             <span class="nav-text">Matches</span>
           </a>
         </div>
         <div class="nav-group">
-          <span class="nav-label">Operations</span>
-          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+          <span class="nav-label">Lead management</span>
+          <!-- <a class="nav-link" href="products.html" title="Membership plans">
             <i class="icon bi bi-box-seam" aria-hidden="true"></i>
-            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a> -->
-          <a class="nav-link" href="tasks.html" title="Tasks">
+           <a class="nav-link" href="tasks.html" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
-            <span class="nav-text">Tasks</span>
+            <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
           </a>
           <a class="nav-link" href="calendar.html" title="Calendar">
             <i class="icon bi bi-calendar3" aria-hidden="true"></i>
-            <span class="nav-text">Calendar</span>
+            <span class="nav-text">Appointments</span>
           </a>
         </div>
         <div class="nav-group">
@@ -95,8 +95,8 @@
       <div class="sidebar-user">
         <span class="avatar tone-coral">AK</span>
         <div class="sidebar-user-info">
-          <strong>Anna Keller</strong>
-          <span>Operations manager</span>
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
         </div>
       </div>
     </aside>
@@ -139,19 +139,19 @@
                 <li>
                   <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
                       aria-hidden="true"></i></span>
-                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-mint">JM</span>
-                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-yellow">SB</span>
-                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                  <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
                 </li>
               </ul>
               <hr />
-              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
                   aria-hidden="true"></i></a>
             </div>
           </div>
@@ -159,7 +159,7 @@
           <div class="dropdown">
             <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
               <span class="avatar avatar--sm tone-coral">AK</span>
-              <span class="user-name">Anna</span>
+              <span class="user-name">Asha</span>
               <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" id="userMenu">
@@ -186,7 +186,7 @@
 
         <div class="tabs" role="tablist" aria-label="Settings sections">
           <button type="button" role="tab" id="tab-company" aria-controls="panel-company"
-            aria-selected="true">Company</button>
+            aria-selected="true">Bureau</button>
           <button type="button" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="false"
             tabindex="-1">Profile</button>
           <button type="button" role="tab" id="tab-notif" aria-controls="panel-notif" aria-selected="false"
@@ -197,38 +197,38 @@
 
         <div class="card card--roomy">
           <form role="tabpanel" id="panel-company" aria-labelledby="tab-company" data-demo-form data-keep
-            data-toast="Company settings saved">
+            data-toast="Bureau settings saved">
             <section class="settings-section">
               <div>
-                <h2>Company</h2>
-                <p>Shown on invoices, quotes and delivery notes.</p>
+                <h2>Bureau profile</h2>
+                <p>Shown on membership invoices and member communications.</p>
               </div>
               <div class="form-grid">
-                <div class="field span-2"><label for="sName">Legal name</label><input class="input" id="sName"
-                    type="text" value="Maison Lumen SAS" required /></div>
-                <div class="field"><label for="sVat">VAT number</label><input class="input" id="sVat" type="text"
-                    value="FR 12 345 678 901" /></div>
+                <div class="field span-2"><label for="sName">Bureau name</label><input class="input" id="sName"
+                    type="text" value="Astha Marriage Bureau" required /></div>
+                <div class="field"><label for="sVat">GSTIN</label><input class="input" id="sVat" type="text"
+                    value="GSTIN: 19ABCDE1234F1Z5" /></div>
                 <div class="field"><label for="sCurrency">Currency</label><select class="select" id="sCurrency">
-                    <option>USD Ã¢â‚¬â€ US dollar</option>
-                    <option>EUR Ã¢â‚¬â€ Euro</option>
-                    <option>GBP Ã¢â‚¬â€ Pound sterling</option>
+                    <option>INR - Indian rupee</option>
+                    <option>EUR - Euro</option>
+                    <option>GBP - Pound sterling</option>
                   </select></div>
                 <div class="field span-2"><label for="sAddress">Address</label><textarea class="textarea textarea--sm"
-                    id="sAddress">14 rue des Tanneurs, 69002 Lyon, France</textarea></div>
+                    id="sAddress">12 Park Street, Kolkata, West Bengal, India</textarea></div>
               </div>
             </section>
             <section class="settings-section">
               <div>
-                <h2>Invoicing</h2>
-                <p>Defaults applied to every new invoice.</p>
+                <h2>Membership billing</h2>
+                <p>Defaults used for membership fee invoices.</p>
               </div>
               <div class="form-grid">
                 <div class="field"><label for="sPrefix">Number prefix</label><input class="input" id="sPrefix"
                     type="text" value="INV-" /><span class="hint">Next invoice: INV-2052</span></div>
-                <div class="field"><label for="sTerms">Default terms</label><select class="select" id="sTerms">
-                    <option>Net 30</option>
-                    <option>Net 45</option>
-                    <option>Net 60</option>
+                <div class="field"><label for="sTerms">Default membership plan</label><select class="select" id="sTerms">
+                    <option>Basic Membership</option>
+                    <option>Assisted Matchmaking</option>
+                    <option>Premium Matchmaking</option>
                   </select></div>
               </div>
             </section>
@@ -268,13 +268,13 @@
                       accept="image/*" class="visually-hidden" data-avatar-input /></label></div>
                 <div class="form-grid">
                   <div class="field"><label for="pFirst">First name</label><input class="input" id="pFirst" type="text"
-                      value="Anna" /></div>
+                      value="Asha" /></div>
                   <div class="field"><label for="pLast">Last name</label><input class="input" id="pLast" type="text"
-                      value="Keller" /></div>
+                      value="Sen" /></div>
                   <div class="field span-2"><label for="pEmail">Email</label><input class="input" id="pEmail"
-                      type="email" value="anna@maisonlumen.example" /></div>
+                      type="email" value="asha@asthamarriage.in" /></div>
                   <div class="field span-2"><label for="pRole">Role</label><input class="input" id="pRole" type="text"
-                      value="Operations manager" /></div>
+                      value="Matrimonial Consultant" /></div>
                 </div>
               </div>
             </section>
@@ -301,19 +301,19 @@
               </div>
               <ul class="option-list" role="list">
                 <li>
-                  <div><strong>Overdue invoices</strong><span>Daily digest of unpaid invoices past due.</span></div>
-                  <label class="switch"><input type="checkbox" checked aria-label="Overdue invoices" /></label>
+                  <div><strong>Membership renewal reminders</strong><span>Reminders when membership renewals are due.</span></div>
+                  <label class="switch"><input type="checkbox" checked aria-label="Membership renewal reminders" /></label>
                 </li>
                 <li>
-                  <div><strong>Low stock alerts</strong><span>When a SKU drops below its reorder point.</span></div>
-                  <label class="switch"><input type="checkbox" checked aria-label="Low stock alerts" /></label>
+                  <div><strong>Incomplete profile reminders</strong><span>When a member profile needs additional information.</span></div>
+                  <label class="switch"><input type="checkbox" checked aria-label="Incomplete profile reminders" /></label>
                 </li>
                 <li>
                   <div><strong>Task mentions</strong><span>When someone mentions you in a task.</span></div><label
                     class="switch"><input type="checkbox" checked aria-label="Task mentions" /></label>
                 </li>
                 <li>
-                  <div><strong>Weekly report</strong><span>Revenue, margin and cash every Monday at 8 am.</span></div>
+                  <div><strong>Weekly report</strong><span>New leads, profile reviews and matches every Monday at 8 am.</span></div>
                   <label class="switch"><input type="checkbox" aria-label="Weekly report" /></label>
                 </li>
               </ul>
@@ -323,8 +323,8 @@
           <div role="tabpanel" id="panel-team" aria-labelledby="tab-team" hidden>
             <div class="card-head">
               <div>
-                <h2 class="card-title">Team members</h2>
-                <p class="card-subtitle">4 of 10 seats used</p>
+                <h2 class="card-title">Consultants</h2>
+                <p class="card-subtitle">4 consultants active</p>
               </div>
               <button type="button" class="btn btn--sm" data-toast="Invitation sent" data-toast-tone="mint"><i
                   class="icon icon--sm bi bi-plus" aria-hidden="true"></i> Invite</button>
@@ -343,7 +343,7 @@
                   <tr>
                     <td>
                       <div class="cell-main"><span class="avatar avatar--sm tone-coral">AK</span>
-                        <div><strong>Anna Keller</strong><span>anna@maisonlumen.example</span></div>
+                        <div><strong>Asha Sen</strong><span>asha@asthamarriage.in</span></div>
                       </div>
                     </td>
                     <td><span class="badge badge--dark">Owner</span></td>
@@ -353,37 +353,37 @@
                   <tr>
                     <td>
                       <div class="cell-main"><span class="avatar avatar--sm tone-mint">JM</span>
-                        <div><strong>Jules Martin</strong><span>jules@maisonlumen.example</span></div>
+                        <div><strong>Rahul Das</strong><span>rahul@asthamarriage.in</span></div>
                       </div>
                     </td>
-                    <td><span class="badge badge--mint">Accountant</span></td>
+                    <td><span class="badge badge--mint">Matchmaking Consultant</span></td>
                     <td>32 min ago</td>
                     <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
-                        data-modal-open="memberModal" aria-label="Edit Jules Martin"><i
+                        data-modal-open="memberModal" aria-label="Edit Rahul Das"><i
                           class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="cell-main"><span class="avatar avatar--sm tone-yellow">SB</span>
-                        <div><strong>Sofia Benali</strong><span>sofia@maisonlumen.example</span></div>
+                        <div><strong>Priya Roy</strong><span>priya@asthamarriage.in</span></div>
                       </div>
                     </td>
-                    <td><span class="badge badge--yellow">Purchasing</span></td>
+                    <td><span class="badge badge--yellow">Profile Coordinator</span></td>
                     <td>1 h ago</td>
                     <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
-                        data-modal-open="memberModal" aria-label="Edit Sofia Benali"><i
+                        data-modal-open="memberModal" aria-label="Edit Priya Roy"><i
                           class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button></td>
                   </tr>
                   <tr>
                     <td>
                       <div class="cell-main"><span class="avatar avatar--sm tone-green">NP</span>
-                        <div><strong>Noah Petit</strong><span>noah@maisonlumen.example</span></div>
+                        <div><strong>Ananya Ghosh</strong><span>ananya@asthamarriage.in</span></div>
                       </div>
                     </td>
-                    <td><span class="badge badge--green">Warehouse</span></td>
+                    <td><span class="badge badge--green">Matchmaking team lead</span></td>
                     <td>Yesterday</td>
                     <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
-                        data-modal-open="memberModal" aria-label="Edit Noah Petit"><i class="icon icon--sm bi bi-pencil"
+                        data-modal-open="memberModal" aria-label="Edit Ananya Ghosh"><i class="icon icon--sm bi bi-pencil"
                           aria-hidden="true"></i></button></td>
                   </tr>
                 </tbody>
@@ -401,10 +401,10 @@
             </div>
             <div class="form-grid">
               <div class="field span-2"><label for="mRole">Role</label><select class="select" id="mRole">
-                  <option>Accountant</option>
-                  <option>Purchasing</option>
-                  <option>Warehouse</option>
-                  <option>Sales</option>
+                  <option>Matchmaking Consultant</option>
+                  <option>Profile Coordinator</option>
+                  <option>Matchmaking team lead</option>
+                  <option>Lead management</option>
                 </select></div>
               <div class="field span-2"><label for="mAccess">Access level</label><select class="select" id="mAccess">
                   <option>Can edit</option>
@@ -420,7 +420,7 @@
         </dialog>
 
         <footer class="footer">
-          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
 
         </footer>
       </main>

@@ -394,7 +394,7 @@
           highlight(true);
           const pct = ((it.value / total) * 100).toFixed(1);
           tooltip.show(
-            `<div class="tt-title">${it.label}</div>${tooltipRow("Revenue", format(it.value), color(it.color))}${tooltipRow("Share", pct + "%")}`,
+            `<div class="tt-title">${it.label}</div>${tooltipRow("Membership fees", format(it.value), color(it.color))}${tooltipRow("Share", pct + "%")}`,
             cx + Math.sin(mid) * r, cy - Math.cos(mid) * r
           );
           o.onHover && o.onHover(it, i);
@@ -497,7 +497,7 @@
           cell.addEventListener("mouseenter", () => {
             cell.setAttribute("stroke", outline);
             cell.setAttribute("stroke-width", 2);
-            tooltip.show(`<div class="tt-title">${o.rowNames ? o.rowNames[r] : o.rows[r]} · ${o.cols[c]}</div>${tooltipRow("Orders", format(v))}`, x + cellW / 2, y);
+            tooltip.show(`<div class="tt-title">${o.rowNames ? o.rowNames[r] : o.rows[r]} · ${o.cols[c]}</div>${tooltipRow("Enquiries", format(v))}`, x + cellW / 2, y);
           });
           cell.addEventListener("mouseleave", () => {
             cell.removeAttribute("stroke");

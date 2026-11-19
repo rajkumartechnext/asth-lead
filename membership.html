@@ -5,12 +5,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Invoices </title>
-  <meta name="description" content="Invoices list with receivables aging, status filters and payment reminders." />
+  <title>Membership Invoices | Astha Marriage Bureau</title>
+  <meta name="description" content="Membership fee invoices with due dates, payment statuses and reminder actions." />
   <meta name="theme-color" content="#0e0e0e" />
 
 
-  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com/" />
   <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap" rel="stylesheet" />
@@ -43,35 +43,35 @@
         </div>
         <div class="nav-group">
          
-          <a class="nav-link" href="members.html" title="Orders">
+          <a class="nav-link" href="leads.html" title="Leads">
             <i class="icon bi bi-person-plus" aria-hidden="true"></i>
-            <span class="nav-text">Members</span>
+            <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
-          <a class="nav-link" href="invoices.html" aria-current="page" title="Invoices">
+          <a class="nav-link" href="membership.html" aria-current="page" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
-            <span class="nav-text">Invoices</span>
+            <span class="nav-text">Membership fees</span>
           </a>
-          <a class="nav-link" href="matches.html" title="Customers">
+          <a class="nav-link" href="matches.html" title="Matches">
             <i class="icon bi bi-ladder" aria-hidden="true"></i>
             <span class="nav-text">Matches</span>
           </a>
         </div>
         <div class="nav-group">
-          <span class="nav-label">Operations</span>
-          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+          <span class="nav-label">Lead management</span>
+          <!-- <a class="nav-link" href="products.html" title="Membership plans">
             <i class="icon bi bi-box-seam" aria-hidden="true"></i>
-            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a> -->
           <a class="nav-link" href="tasks.html" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
-            <span class="nav-text">Tasks</span>
+            <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
           </a>
         <a class="nav-link" href="calendar.html" title="Calendar">
             <i class="icon bi bi-calendar3" aria-hidden="true"></i>
-            <span class="nav-text">Calendar</span>
+            <span class="nav-text">Appointments</span>
           </a>
         </div>
         <div class="nav-group">
@@ -90,8 +90,8 @@
       <div class="sidebar-user">
         <span class="avatar tone-coral">AK</span>
         <div class="sidebar-user-info">
-          <strong>Anna Keller</strong>
-          <span>Operations manager</span>
+          <strong>Asha Sen</strong>
+          <span>Matrimonial Consultant</span>
         </div>
       </div>
     </aside>
@@ -131,26 +131,26 @@
               <ul class="notif-list" role="list">
                 <li>
                   <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle" aria-hidden="true"></i></span>
-                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-mint">JM</span>
-                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
                 </li>
                 <li>
                   <span class="avatar avatar--sm tone-yellow">SB</span>
-                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                  <div><strong>Priya</strong> approved membership plan INTRO-311<time>1 h ago</time></div>
                 </li>
               </ul>
               <hr />
-              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right" aria-hidden="true"></i></a>
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right" aria-hidden="true"></i></a>
             </div>
           </div>
 
           <div class="dropdown">
             <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
               <span class="avatar avatar--sm tone-coral">AK</span>
-              <span class="user-name">Anna</span>
+              <span class="user-name">Asha</span>
               <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
             </button>
             <div class="dropdown-menu" id="userMenu">
@@ -171,7 +171,7 @@
             <h1><span class="marker marker--mint">Invoices</span></h1>
           </div>
           <div class="page-actions">
-            <button type="button" class="btn btn--outline" data-toast="Statements sent to 3 customers" data-toast-tone="yellow"><i class="icon bi bi-envelope" aria-hidden="true"></i> Send statements</button>
+            <button type="button" class="btn btn--outline" data-toast="Fee reminders sent to 3 members" data-toast-tone="yellow"><i class="icon bi bi-envelope" aria-hidden="true"></i> Send fee reminders</button>
             <a class="btn" href="invoice.html"><i class="icon bi bi-plus" aria-hidden="true"></i> New invoice</a>
           </div>
         </div>
@@ -187,7 +187,7 @@
                 <button type="button" data-filter="sent" aria-pressed="false">Sent <em>2</em></button>
                 <button type="button" data-filter="partial" aria-pressed="false">Partial <em>1</em></button>
                 <button type="button" data-filter="paid" aria-pressed="false">Paid <em>3</em></button>
-                <button type="button" data-filter="draft" aria-pressed="false">Drafts <em>1</em></button>
+                <button type="button" data-filter="draft" aria-pressed="false">New <em>1</em></button>
               </div>
             </div>
             <div class="table-wrap">
@@ -195,7 +195,7 @@
                 <thead>
                   <tr>
                     <th scope="col" data-sort="text">Invoice</th>
-                    <th scope="col" data-sort="text">Customer</th>
+                    <th scope="col" data-sort="text">Profile</th>
                     <th scope="col">Issued</th>
                     <th scope="col">Due</th>
                     <th scope="col">Status</th>
@@ -206,11 +206,11 @@
                 <tbody>
                   <tr data-status="sent">
                     <td class="mono"><a class="link" href="invoice.html">INV-2051</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">NH</span><div><strong>Nordhaus Interiors</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">NH</span><div><strong>Riya Banerjee</strong></div></div></td>
                     <td class="nowrap">Sep 29, 2026</td>
                     <td class="nowrap">Oct 29, 2026</td>
                     <td><span class="badge badge--mint">Sent</span></td>
-                    <td class="text-right mono" data-value="1935.5">$1,935.50</td>
+                    <td class="text-right mono" data-value="1935.5">INR 1,935.50</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2051"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2051" data-toast="Reminder sent for INV-2051" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -218,11 +218,11 @@
                   </tr>
                   <tr data-status="paid">
                     <td class="mono"><a class="link" href="invoice.html">INV-2050</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">GM</span><div><strong>Galerie Mercier</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">GM</span><div><strong>Aditi Mukherjee</strong></div></div></td>
                     <td class="nowrap">Sep 28, 2026</td>
                     <td class="nowrap">Oct 28, 2026</td>
                     <td><span class="badge badge--green">Paid</span></td>
-                    <td class="text-right mono" data-value="8420.0">$8,420.00</td>
+                    <td class="text-right mono" data-value="8420.0">INR 8,420.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2050"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2050" data-toast="Reminder sent for INV-2050" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -230,11 +230,11 @@
                   </tr>
                   <tr data-status="sent">
                     <td class="mono"><a class="link" href="invoice.html">INV-2049</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">CA</span><div><strong>Casa Alta</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">CA</span><div><strong>Priyanka Sen</strong></div></div></td>
                     <td class="nowrap">Sep 26, 2026</td>
                     <td class="nowrap">Oct 26, 2026</td>
                     <td><span class="badge badge--mint">Sent</span></td>
-                    <td class="text-right mono" data-value="3112.8">$3,112.80</td>
+                    <td class="text-right mono" data-value="3112.8">INR 3,112.80</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2049"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2049" data-toast="Reminder sent for INV-2049" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -242,11 +242,11 @@
                   </tr>
                   <tr data-status="overdue">
                     <td class="mono"><a class="link" href="invoice.html">INV-2048</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span><div><strong>Studio Tessa</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span><div><strong>Kavita Das</strong></div></div></td>
                     <td class="nowrap">Aug 18, 2026</td>
                     <td class="nowrap">Sep 17, 2026</td>
                     <td><span class="badge badge--coral">12 days overdue</span></td>
-                    <td class="text-right mono" data-value="2489.0">$2,489.00</td>
+                    <td class="text-right mono" data-value="2489.0">INR 2,489.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2048"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2048" data-toast="Reminder sent for INV-2048" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -254,11 +254,11 @@
                   </tr>
                   <tr data-status="partial">
                     <td class="mono"><a class="link" href="invoice.html">INV-2047</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">LM</span><div><strong>Luce Milano</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-green">LM</span><div><strong>Moumita Ghosh</strong></div></div></td>
                     <td class="nowrap">Aug 30, 2026</td>
                     <td class="nowrap">Sep 29, 2026</td>
                     <td><span class="badge badge--yellow">Partially paid</span></td>
-                    <td class="text-right mono" data-value="9875.0">$9,875.00</td>
+                    <td class="text-right mono" data-value="9875.0">INR 9,875.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2047"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2047" data-toast="Reminder sent for INV-2047" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -266,11 +266,11 @@
                   </tr>
                   <tr data-status="paid">
                     <td class="mono"><a class="link" href="invoice.html">INV-2046</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">HH</span><div><strong>Hygge Home</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-mint">HH</span><div><strong>Sohini Paul</strong></div></div></td>
                     <td class="nowrap">Aug 27, 2026</td>
                     <td class="nowrap">Sep 26, 2026</td>
                     <td><span class="badge badge--green">Paid</span></td>
-                    <td class="text-right mono" data-value="5480.4">$5,480.40</td>
+                    <td class="text-right mono" data-value="5480.4">INR 5,480.40</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2046"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2046" data-toast="Reminder sent for INV-2046" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -278,11 +278,11 @@
                   </tr>
                   <tr data-status="overdue">
                     <td class="mono"><a class="link" href="invoice.html">INV-2045</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">AR</span><div><strong>Atelier Ruban</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-coral">AR</span><div><strong>Anirban Bose</strong></div></div></td>
                     <td class="nowrap">Aug 12, 2026</td>
                     <td class="nowrap">Sep 11, 2026</td>
                     <td><span class="badge badge--coral">18 days overdue</span></td>
-                    <td class="text-right mono" data-value="1720.0">$1,720.00</td>
+                    <td class="text-right mono" data-value="1720.0">INR 1,720.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2045"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2045" data-toast="Reminder sent for INV-2045" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -290,11 +290,11 @@
                   </tr>
                   <tr data-status="paid">
                     <td class="mono"><a class="link" href="invoice.html">INV-2044</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">LR</span><div><strong>The Lamp Room</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">LR</span><div><strong>Subhajit Roy</strong></div></div></td>
                     <td class="nowrap">Aug 25, 2026</td>
                     <td class="nowrap">Sep 24, 2026</td>
                     <td><span class="badge badge--green">Paid</span></td>
-                    <td class="text-right mono" data-value="1610.9">$1,610.90</td>
+                    <td class="text-right mono" data-value="1610.9">INR 1,610.90</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2044"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2044" data-toast="Reminder sent for INV-2044" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -302,11 +302,11 @@
                   </tr>
                   <tr data-status="draft">
                     <td class="mono"><a class="link" href="invoice.html">INV-2043</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm">OW</span><div><strong>Oakwood &amp; Co.</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm">OW</span><div><strong>Arjun Dutta</strong></div></div></td>
                     <td class="nowrap">Sep 29, 2026</td>
-                    <td class="nowrap">Ã¢â‚¬â€</td>
+                    <td class="nowrap">-</td>
                     <td><span class="badge">Draft</span></td>
-                    <td class="text-right mono" data-value="12760.0">$12,760.00</td>
+                    <td class="text-right mono" data-value="12760.0">INR 12,760.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2043"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2043" data-toast="Reminder sent for INV-2043" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -314,11 +314,11 @@
                   </tr>
                   <tr data-status="overdue">
                     <td class="mono"><a class="link" href="invoice.html">INV-2042</a></td>
-                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">MP</span><div><strong>Maison PÃƒÂ©pin</strong></div></div></td>
+                    <td><div class="cell-main"><span class="avatar avatar--sm tone-yellow">AM</span><div><strong>Arpita Manna</strong></div></div></td>
                     <td class="nowrap">Aug 05, 2026</td>
                     <td class="nowrap">Sep 04, 2026</td>
                     <td><span class="badge badge--coral">25 days overdue</span></td>
-                    <td class="text-right mono" data-value="4150.0">$4,150.00</td>
+                    <td class="text-right mono" data-value="4150.0">INR 4,150.00</td>
                     <td class="text-right nowrap">
                       <a class="icon-btn icon-btn--ghost icon-btn--sm" href="invoice.html" aria-label="Open INV-2042"><i class="icon icon--sm bi bi-eye" aria-hidden="true"></i></a>
                       <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" aria-label="Send reminder for INV-2042" data-toast="Reminder sent for INV-2042" data-toast-tone="yellow"><i class="icon icon--sm bi bi-send" aria-hidden="true"></i></button>
@@ -341,7 +341,7 @@
         </section>
 
         <footer class="footer">
-          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
           
         </footer>
       </main>
