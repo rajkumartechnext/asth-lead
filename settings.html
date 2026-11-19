@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Settings Ã¢â‚¬â€ Trombone Admin</title>
+  <meta name="description" content="Company, profile, notifications, team and billing settings with tabs." />
+  <meta name="theme-color" content="#0e0e0e" />
+
+
+  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+
+  <div class="app" id="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="">
+      </a>
+      <a href="index.html" class="brand sidebar-close">
+        <img src="images/logo-1.png" alt="">
+      </a>
+
+      <nav aria-label="Sections">
+        <div class="nav-group">
+          <span class="nav-label">Overview</span>
+          <a class="nav-link" href="index.html" title="Dashboard">
+            <i class="icon bi bi-house" aria-hidden="true"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </div>
+        <div class="nav-group">
+
+          <a class="nav-link" href="members.html" title="Orders">
+            <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+            <span class="nav-text">Members</span>
+            <span class="nav-count">12</span>
+          </a>
+          <a class="nav-link" href="invoices.html" title="Invoices">
+            <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+            <span class="nav-text">Invoices</span>
+          </a>
+          <a class="nav-link" href="matches.html" title="Customers">
+            <i class="icon bi bi-ladder" aria-hidden="true"></i>
+            <span class="nav-text">Matches</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Operations</span>
+          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+          <a class="nav-link" href="tasks.html" title="Tasks">
+            <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+            <span class="nav-text">Tasks</span>
+            <span class="nav-count">8</span>
+          </a>
+          <a class="nav-link" href="calendar.html" title="Calendar">
+            <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Workspace</span>
+         <a class="nav-link" href="settings.html" title="Settings" aria-current="page" >
+            <i class="icon bi bi-sliders" aria-hidden="true"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+          <a class="nav-link" href="roles-permissions.html"><i class="icon bi bi-lock"
+              aria-hidden="true"></i><span class="nav-text">Roles &amp; permissions</span></a>
+
+
+      </nav>
+
+
+
+      <div class="sidebar-user">
+        <span class="avatar tone-coral">AK</span>
+        <div class="sidebar-user-info">
+          <strong>Anna Keller</strong>
+          <span>Operations manager</span>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <div class="main">
+
+      <header class="topbar">
+        <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open aria-controls="sidebar"
+          aria-expanded="false">
+          <i class="icon bi bi-list" aria-hidden="true"></i>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+        
+        <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse
+          aria-controls="sidebar" aria-pressed="false">
+          <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+          <span class="visually-hidden">Collapse sidebar</span>
+        </button>
+
+
+        <div class="topbar-actions">
+                    <a href="massege.html">
+                        <button type="button" class="icon-btn" aria-pressed="false">
+                            <div class="under-msg" aria-hidden="true">4</div>
+                            <i class="bi bi-messenger"></i>
+                        </button>
+                    </a>
+
+
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown aria-expanded="false" aria-controls="notifMenu">
+              <i class="icon bi bi-bell" aria-hidden="true"></i>
+              <span class="ping" aria-hidden="true"></span>
+              <span class="visually-hidden">Notifications (3 unread)</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+              <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+              <ul class="notif-list" role="list">
+                <li>
+                  <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
+                      aria-hidden="true"></i></span>
+                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-mint">JM</span>
+                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-yellow">SB</span>
+                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                </li>
+              </ul>
+              <hr />
+              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
+              <span class="avatar avatar--sm tone-coral">AK</span>
+              <span class="user-name">Anna</span>
+              <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" id="userMenu">
+              <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i> Profile</a>
+              <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i> Settings</a>
+              
+              <hr />
+              <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <div class="page-head">
+          <div>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Dashboard</a></li>
+              <li aria-current="page">Settings</li>
+            </ol>
+            <h1><span class="marker">Settings</span></h1>
+          </div>
+        </div>
+
+        <div class="tabs" role="tablist" aria-label="Settings sections">
+          <button type="button" role="tab" id="tab-company" aria-controls="panel-company"
+            aria-selected="true">Company</button>
+          <button type="button" role="tab" id="tab-profile" aria-controls="panel-profile" aria-selected="false"
+            tabindex="-1">Profile</button>
+          <button type="button" role="tab" id="tab-notif" aria-controls="panel-notif" aria-selected="false"
+            tabindex="-1">Notifications</button>
+          <button type="button" role="tab" id="tab-team" aria-controls="panel-team" aria-selected="false"
+            tabindex="-1">Team</button>
+        </div>
+
+        <div class="card card--roomy">
+          <form role="tabpanel" id="panel-company" aria-labelledby="tab-company" data-demo-form data-keep
+            data-toast="Company settings saved">
+            <section class="settings-section">
+              <div>
+                <h2>Company</h2>
+                <p>Shown on invoices, quotes and delivery notes.</p>
+              </div>
+              <div class="form-grid">
+                <div class="field span-2"><label for="sName">Legal name</label><input class="input" id="sName"
+                    type="text" value="Maison Lumen SAS" required /></div>
+                <div class="field"><label for="sVat">VAT number</label><input class="input" id="sVat" type="text"
+                    value="FR 12 345 678 901" /></div>
+                <div class="field"><label for="sCurrency">Currency</label><select class="select" id="sCurrency">
+                    <option>USD Ã¢â‚¬â€ US dollar</option>
+                    <option>EUR Ã¢â‚¬â€ Euro</option>
+                    <option>GBP Ã¢â‚¬â€ Pound sterling</option>
+                  </select></div>
+                <div class="field span-2"><label for="sAddress">Address</label><textarea class="textarea textarea--sm"
+                    id="sAddress">14 rue des Tanneurs, 69002 Lyon, France</textarea></div>
+              </div>
+            </section>
+            <section class="settings-section">
+              <div>
+                <h2>Invoicing</h2>
+                <p>Defaults applied to every new invoice.</p>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="sPrefix">Number prefix</label><input class="input" id="sPrefix"
+                    type="text" value="INV-" /><span class="hint">Next invoice: INV-2052</span></div>
+                <div class="field"><label for="sTerms">Default terms</label><select class="select" id="sTerms">
+                    <option>Net 30</option>
+                    <option>Net 45</option>
+                    <option>Net 60</option>
+                  </select></div>
+              </div>
+            </section>
+            <section class="settings-section">
+              <div>
+                <h2>Highlight color</h2>
+                <p>Accent used for stickers and highlights in your documents.</p>
+              </div>
+              <div class="color-options" role="radiogroup" aria-label="Highlight color">
+                <label><input type="radio" name="accent" value="yellow" checked /><span class="tone-yellow"></span><b
+                    class="visually-hidden">Yellow</b></label>
+                <label><input type="radio" name="accent" value="coral" /><span class="tone-coral"></span><b
+                    class="visually-hidden">Coral</b></label>
+                <label><input type="radio" name="accent" value="green" /><span class="tone-green"></span><b
+                    class="visually-hidden">Green</b></label>
+                <label><input type="radio" name="accent" value="mint" /><span class="tone-mint"></span><b
+                    class="visually-hidden">Mint</b></label>
+              </div>
+            </section>
+            <div class="modal-actions pt-md">
+              <button type="reset" class="btn btn--ghost">Discard</button>
+              <button type="submit" class="btn">Save changes</button>
+            </div>
+          </form>
+
+          <form role="tabpanel" id="panel-profile" aria-labelledby="tab-profile" hidden data-demo-form data-keep
+            data-toast="Profile updated">
+            <section class="settings-section">
+              <div>
+                <h2>Your profile</h2>
+                <p>How your teammates see you.</p>
+              </div>
+              <div class="stack">
+                <div class="cluster gap-sm"><span class="avatar avatar--xl tone-coral"
+                    data-avatar-preview>AK</span><label class="btn btn--outline btn--sm"><i
+                      class="icon icon--sm bi bi-upload" aria-hidden="true"></i> Upload photo<input type="file"
+                      accept="image/*" class="visually-hidden" data-avatar-input /></label></div>
+                <div class="form-grid">
+                  <div class="field"><label for="pFirst">First name</label><input class="input" id="pFirst" type="text"
+                      value="Anna" /></div>
+                  <div class="field"><label for="pLast">Last name</label><input class="input" id="pLast" type="text"
+                      value="Keller" /></div>
+                  <div class="field span-2"><label for="pEmail">Email</label><input class="input" id="pEmail"
+                      type="email" value="anna@maisonlumen.example" /></div>
+                  <div class="field span-2"><label for="pRole">Role</label><input class="input" id="pRole" type="text"
+                      value="Operations manager" /></div>
+                </div>
+              </div>
+            </section>
+            <section class="settings-section">
+              <div>
+                <h2>Password</h2>
+                <p>At least 12 characters.</p>
+              </div>
+              <div class="form-grid">
+                <div class="field"><label for="pOld">Current password</label><input class="input" id="pOld"
+                    type="password" autocomplete="current-password" /></div>
+                <div class="field"><label for="pNew">New password</label><input class="input" id="pNew" type="password"
+                    autocomplete="new-password" minlength="12" /></div>
+              </div>
+            </section>
+            <div class="modal-actions pt-md"><button type="submit" class="btn">Save profile</button></div>
+          </form>
+
+          <div role="tabpanel" id="panel-notif" aria-labelledby="tab-notif" hidden>
+            <section class="settings-section">
+              <div>
+                <h2>Email notifications</h2>
+                <p>Choose what lands in your inbox.</p>
+              </div>
+              <ul class="option-list" role="list">
+                <li>
+                  <div><strong>Overdue invoices</strong><span>Daily digest of unpaid invoices past due.</span></div>
+                  <label class="switch"><input type="checkbox" checked aria-label="Overdue invoices" /></label>
+                </li>
+                <li>
+                  <div><strong>Low stock alerts</strong><span>When a SKU drops below its reorder point.</span></div>
+                  <label class="switch"><input type="checkbox" checked aria-label="Low stock alerts" /></label>
+                </li>
+                <li>
+                  <div><strong>Task mentions</strong><span>When someone mentions you in a task.</span></div><label
+                    class="switch"><input type="checkbox" checked aria-label="Task mentions" /></label>
+                </li>
+                <li>
+                  <div><strong>Weekly report</strong><span>Revenue, margin and cash every Monday at 8 am.</span></div>
+                  <label class="switch"><input type="checkbox" aria-label="Weekly report" /></label>
+                </li>
+              </ul>
+            </section>
+          </div>
+
+          <div role="tabpanel" id="panel-team" aria-labelledby="tab-team" hidden>
+            <div class="card-head">
+              <div>
+                <h2 class="card-title">Team members</h2>
+                <p class="card-subtitle">4 of 10 seats used</p>
+              </div>
+              <button type="button" class="btn btn--sm" data-toast="Invitation sent" data-toast-tone="mint"><i
+                  class="icon icon--sm bi bi-plus" aria-hidden="true"></i> Invite</button>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Member</th>
+                    <th scope="col">Role</th>
+                    <th scope="col">Last active</th>
+                    <th scope="col"><span class="visually-hidden">Actions</span></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-coral">AK</span>
+                        <div><strong>Anna Keller</strong><span>anna@maisonlumen.example</span></div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--dark">Owner</span></td>
+                    <td>Now</td>
+                    <td></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-mint">JM</span>
+                        <div><strong>Jules Martin</strong><span>jules@maisonlumen.example</span></div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--mint">Accountant</span></td>
+                    <td>32 min ago</td>
+                    <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+                        data-modal-open="memberModal" aria-label="Edit Jules Martin"><i
+                          class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-yellow">SB</span>
+                        <div><strong>Sofia Benali</strong><span>sofia@maisonlumen.example</span></div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--yellow">Purchasing</span></td>
+                    <td>1 h ago</td>
+                    <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+                        data-modal-open="memberModal" aria-label="Edit Sofia Benali"><i
+                          class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-green">NP</span>
+                        <div><strong>Noah Petit</strong><span>noah@maisonlumen.example</span></div>
+                      </div>
+                    </td>
+                    <td><span class="badge badge--green">Warehouse</span></td>
+                    <td>Yesterday</td>
+                    <td class="text-right"><button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+                        data-modal-open="memberModal" aria-label="Edit Noah Petit"><i class="icon icon--sm bi bi-pencil"
+                          aria-hidden="true"></i></button></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <dialog class="modal" id="memberModal" aria-labelledby="memberTitle">
+          <form method="dialog" data-demo-form data-toast="Member updated">
+            <div class="modal-head">
+              <h2 id="memberTitle">Edit team member</h2>
+              <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close aria-label="Close"><i
+                  class="icon bi bi-x" aria-hidden="true"></i></button>
+            </div>
+            <div class="form-grid">
+              <div class="field span-2"><label for="mRole">Role</label><select class="select" id="mRole">
+                  <option>Accountant</option>
+                  <option>Purchasing</option>
+                  <option>Warehouse</option>
+                  <option>Sales</option>
+                </select></div>
+              <div class="field span-2"><label for="mAccess">Access level</label><select class="select" id="mAccess">
+                  <option>Can edit</option>
+                  <option>Can view</option>
+                  <option>Admin</option>
+                </select></div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn--ghost" data-modal-close>Cancel</button>
+              <button type="submit" class="btn">Save</button>
+            </div>
+          </form>
+        </dialog>
+
+        <footer class="footer">
+          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+
+</html>

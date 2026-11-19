@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roles &amp; Permissions Ã¢â‚¬â€ Trombone Admin</title>
+  <meta name="theme-color" content="#0e0e0e" />
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .rp-intro {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md)
+    }
+
+    .rp-intro-icon {
+      display: grid;
+      width: 3.25rem;
+      height: 3.25rem;
+      flex-shrink: 0;
+      place-items: center;
+      border-radius: var(--radius-md);
+      background: var(--coral-soft);
+      border: 1.5px solid var(--color-border-strong)
+    }
+
+    .rp-intro-icon .icon {
+      color: var(--coral)
+    }
+
+    .rp-card {
+      padding: 0;
+      overflow: hidden
+    }
+
+    .rp-card-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      padding: var(--space-md);
+      border-bottom: 1px solid var(--color-border)
+    }
+
+    .rp-card-head h2 {
+      font-size: var(--fs-700)
+    }
+
+    .rp-card-head p {
+      margin-top: .15rem;
+      color: var(--color-text-muted);
+      font-size: var(--fs-300)
+    }
+
+    .rp-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2xs)
+    }
+
+    .rp-count {
+      padding: .3rem .7rem;
+      border: 1.5px solid var(--color-outline);
+      border-radius: var(--radius-pill);
+      background: var(--yellow);
+      color: #0e0e0e;
+      font-size: var(--fs-300);
+      font-weight: 800
+    }
+
+    .rp-tabs {
+      display: flex;
+      gap: .35rem;
+      padding: .75rem var(--space-md);
+      border-bottom: 1px solid var(--color-border);
+      overflow-x: auto
+    }
+
+    .rp-tab {
+      display: flex;
+      align-items: center;
+      gap: .55rem;
+      height: 2.25rem;
+      padding: 0 .85rem;
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-pill);
+      background: var(--color-surface);
+      color: var(--color-text);
+      font-size: var(--fs-300);
+      font-weight: 700;
+      white-space: nowrap
+    }
+
+    .rp-tab.is-active {
+      border-color: var(--color-border-strong);
+      background: var(--color-text);
+      color: var(--color-bg)
+    }
+
+    .rp-tab-count {
+      min-width: 1.35rem;
+      padding: .05rem .35rem;
+      border-radius: var(--radius-pill);
+      background: var(--coral-soft);
+      color: var(--color-text);
+      font-size: var(--fs-200);
+      text-align: center
+    }
+
+    .rp-tab.is-active .rp-tab-count {
+      background: var(--coral);
+      color: #0e0e0e
+    }
+
+    .rp-role-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-md);
+      margin: var(--space-md);
+      padding: .75rem 1rem;
+      border: 1.5px solid var(--coral-soft);
+      border-radius: var(--radius-md);
+      background: color-mix(in srgb, var(--coral-soft) 58%, var(--color-surface))
+    }
+
+    .rp-role-id {
+      display: flex;
+      align-items: center;
+      gap: .75rem
+    }
+
+    .rp-role-icon {
+      display: grid;
+      width: 2.75rem;
+      height: 2.75rem;
+      place-items: center;
+      border: 1.5px solid #0e0e0e;
+      border-radius: 50%;
+      background: var(--coral);
+      color: #0e0e0e
+    }
+
+    .rp-role-id strong {
+      display: block
+    }
+
+    .rp-role-id span {
+      color: var(--color-text-muted);
+      font-size: var(--fs-300)
+    }
+
+    .rp-role-tools {
+      display: flex;
+      align-items: center;
+      gap: var(--space-xs)
+    }
+
+    .rp-selected {
+      padding: .22rem .55rem;
+      border-radius: var(--radius-pill);
+      background: var(--coral);
+      color: #0e0e0e;
+      font-size: var(--fs-200);
+      font-weight: 800
+    }
+
+    .rp-matrix {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: var(--space-sm);
+      padding: 0 var(--space-md) var(--space-md)
+    }
+
+    .rp-group {
+      border: 1.5px solid var(--color-border);
+      border-radius: var(--radius-md);
+      background: var(--color-surface);
+      overflow: hidden
+    }
+
+    .rp-group-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 3.25rem;
+      padding: 0 var(--space-sm);
+      border-bottom: 1.5px solid var(--color-border);
+      font-size: var(--fs-300);
+      font-weight: 800
+    }
+
+    .rp-group-head span:first-child {
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .rp-group-icon {
+      color: var(--coral)
+    }
+
+    .rp-group-count {
+      padding: .15rem .45rem;
+      border-radius: var(--radius-pill);
+      background: var(--coral-soft);
+      color: var(--coral);
+      font-size: var(--fs-200)
+    }
+
+    .rp-permission {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      padding: .72rem var(--space-sm);
+      border-bottom: 1px solid var(--color-border);
+      font-size: var(--fs-300)
+    }
+
+    .rp-permission:last-child {
+      border-bottom: 0
+    }
+
+    .rp-permission input,
+    .rp-check {
+      width: 1.05rem;
+      height: 1.05rem;
+      margin: 0;
+      accent-color: var(--green)
+    }
+
+    .rp-table-wrap {
+      padding: 0 var(--space-md) var(--space-md)
+    }
+
+    .rp-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: var(--fs-300)
+    }
+
+    .rp-table th,
+    .rp-table td {
+      padding: .8rem .65rem;
+      border-bottom: 1px solid var(--color-border);
+      text-align: left
+    }
+
+    .rp-table th {
+      color: var(--color-text-muted);
+      font-size: var(--fs-200);
+      text-transform: uppercase;
+      letter-spacing: .04em
+    }
+
+    .rp-table td strong {
+      display: block
+    }
+
+    .rp-table-actions {
+      display: flex;
+      gap: .35rem;
+      justify-content: flex-end
+    }
+
+    .rp-table-actions .icon-btn {
+      width: 2rem;
+      height: 2rem;
+      border: 0;
+      background: var(--color-surface-2)
+    }
+
+    .rp-group-name {
+      display: flex;
+      align-items: center;
+      gap: .65rem;
+      font-weight: 700
+    }
+
+    .rp-group-name .avatar {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 9px
+    }
+
+    .rp-footer-note {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: .85rem var(--space-md);
+      border-top: 1px solid var(--color-border);
+      background: var(--color-surface-2);
+      font-size: var(--fs-300)
+    }
+
+    [data-rp-panel][hidden] {
+      display: none
+    }
+
+    @media(max-width:64rem) {
+      .rp-matrix {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+      }
+    }
+
+    @media(max-width:48rem) {
+
+      .rp-card-head,
+      .rp-role-head,
+      .rp-footer-note {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .rp-actions {
+        width: 100%;
+        justify-content: flex-end
+      }
+
+      .rp-matrix {
+        grid-template-columns: 1fr
+      }
+
+      .rp-table-wrap {
+        overflow-x: auto
+      }
+
+      .rp-table {
+        min-width: 43rem
+      }
+
+      .rp-tabs {
+        padding-inline: .75rem
+      }
+
+      .rp-role-tools {
+        width: 100%;
+        justify-content: flex-end
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+  <div class="app" id="app">
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="">
+      </a>
+      <a href="index.html" class="brand sidebar-close">
+        <img src="images/logo-1.png" alt="">
+      </a>
+
+      <nav aria-label="Sections">
+        <div class="nav-group">
+          <span class="nav-label">Overview</span>
+          <a class="nav-link" href="index.html" title="Dashboard">
+            <i class="icon bi bi-house" aria-hidden="true"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </div>
+        <div class="nav-group">
+
+          <a class="nav-link" href="members.html" title="Orders">
+            <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+            <span class="nav-text">Members</span>
+            <span class="nav-count">12</span>
+          </a>
+          <a class="nav-link" href="invoices.html" title="Invoices">
+            <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+            <span class="nav-text">Invoices</span>
+          </a>
+          <a class="nav-link" href="matches.html" title="Customers">
+            <i class="icon bi bi-ladder" aria-hidden="true"></i>
+            <span class="nav-text">Matches</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Operations</span>
+          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+          <a class="nav-link" href="tasks.html" title="Tasks">
+            <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+            <span class="nav-text">Tasks</span>
+            <span class="nav-count">8</span>
+          </a>
+          <a class="nav-link" href="calendar.html" title="Calendar">
+            <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Workspace</span>
+          <a class="nav-link" href="settings.html" title="Settings">
+            <i class="icon bi bi-sliders" aria-hidden="true"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+          <a class="nav-link" href="roles-permissions.html" aria-current="page"><i class="icon bi bi-lock"
+              aria-hidden="true"></i><span class="nav-text">Roles &amp; permissions</span></a>
+
+
+      </nav>
+
+
+
+      <div class="sidebar-user">
+        <span class="avatar tone-coral">AK</span>
+        <div class="sidebar-user-info">
+          <strong>Anna Keller</strong>
+          <span>Operations manager</span>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+    <div class="main">
+      <header class="topbar">
+        <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open aria-controls="sidebar"
+          aria-expanded="false">
+          <i class="icon bi bi-list" aria-hidden="true"></i>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+       
+        <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse
+          aria-controls="sidebar" aria-pressed="false">
+          <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+          <span class="visually-hidden">Collapse sidebar</span>
+        </button>
+
+
+        <div class="topbar-actions">
+                    <a href="massege.html">
+                        <button type="button" class="icon-btn" aria-pressed="false">
+                            <div class="under-msg" aria-hidden="true">4</div>
+                            <i class="bi bi-messenger"></i>
+                        </button>
+                    </a>
+
+
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown aria-expanded="false" aria-controls="notifMenu">
+              <i class="icon bi bi-bell" aria-hidden="true"></i>
+              <span class="ping" aria-hidden="true"></span>
+              <span class="visually-hidden">Notifications (3 unread)</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+              <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+              <ul class="notif-list" role="list">
+                <li>
+                  <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
+                      aria-hidden="true"></i></span>
+                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-mint">JM</span>
+                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-yellow">SB</span>
+                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                </li>
+              </ul>
+              <hr />
+              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
+              <span class="avatar avatar--sm tone-coral">AK</span>
+              <span class="user-name">Anna</span>
+              <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" id="userMenu">
+              <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i> Profile</a>
+              <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i> Settings</a>
+              
+              <hr />
+              <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <div class="page-head">
+          <div>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Dashboard</a></li>
+              <li>Workspace</li>
+              <li aria-current="page">Roles &amp; permissions</li>
+            </ol>
+            <h1>Roles <span class="marker marker--coral">&amp; permissions</span></h1>
+          </div>
+        </div>
+
+
+        <section class="card rp-card">
+          <header class="rp-card-head">
+            <div>
+              <h2 data-rp-title>Role Wise Permission</h2>
+              <p data-rp-subtitle>Select a permission group for each role.</p>
+            </div>
+            <div class="rp-actions"><span class="rp-count">203 Permissions</span><button type="button"
+                class="btn btn--outline btn--sm" data-rp-reset>Reset</button><button type="button" class="btn btn--sm"
+                data-rp-save>Save changes</button></div>
+          </header>
+
+          <div class="rp-tabs" role="tablist">
+            <button type="button" class="rp-tab is-active" role="tab" aria-selected="true"
+              data-rp-tab="role-matrix">Role &amp; Permission</button>
+            <button type="button" class="rp-tab" role="tab" aria-selected="false" data-rp-tab="roles">Roles <span
+                class="rp-tab-count">5</span></button>
+            <button type="button" class="rp-tab" role="tab" aria-selected="false" data-rp-tab="groups">Permission Groups
+              <span class="rp-tab-count">8</span></button>
+            <button type="button" class="rp-tab" role="tab" aria-selected="false" data-rp-tab="permissions">Permissions
+              <span class="rp-tab-count">203</span></button>
+          </div>
+
+          <div data-rp-panel="role-matrix">
+            <div class="rp-tabs" role="tablist" aria-label="Roles">
+              <button type="button" class="rp-tab is-active" data-role-tab="Super Admin">Super Admin <span
+                  class="rp-tab-count">203</span></button>
+              <button type="button" class="rp-tab" data-role-tab="Admin">Admin <span
+                  class="rp-tab-count">0</span></button>
+              <button type="button" class="rp-tab" data-role-tab="Member">Member <span
+                  class="rp-tab-count">226</span></button>
+              <button type="button" class="rp-tab" data-role-tab="Manager">Manager <span
+                  class="rp-tab-count">1</span></button>
+              <button type="button" class="rp-tab" data-role-tab="Accountant">Accountant <span
+                  class="rp-tab-count">1</span></button>
+            </div>
+            <div class="rp-role-head">
+              <div class="rp-role-id"><span class="rp-role-icon"><i class="icon bi bi-people"
+                    aria-hidden="true"></i></span>
+                <div><strong data-rp-role-name>Super Admin</strong><span>Full administrative access</span></div>
+              </div>
+              <div class="rp-role-tools"><button type="button" class="btn btn--ghost btn--sm" data-rp-select-all>Select
+                  All</button><span class="rp-selected" data-rp-selected>0 / 203</span></div>
+            </div>
+            <div class="rp-matrix" data-rp-matrix>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Dashboard</span><span
+                    class="rp-group-count">0/2</span></header>
+                <label class="rp-permission"><input type="checkbox" />Dashboard.view</label>
+                <label class="rp-permission"><input type="checkbox" />Dashboard.manage</label>
+              </article>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Users</span><span
+                    class="rp-group-count">0/19</span></header>
+                <label class="rp-permission"><input type="checkbox" />Users.view</label>
+                <label class="rp-permission"><input type="checkbox" />Users.manage</label>
+                <label class="rp-permission"><input type="checkbox" />Users.create</label>
+                <label class="rp-permission"><input type="checkbox" />Users.delete</label>
+              </article>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Profiles</span><span
+                    class="rp-group-count">0/3</span></header>
+                <label class="rp-permission"><input type="checkbox" />Profiles.view</label>
+                <label class="rp-permission"><input type="checkbox" />Profiles.manage</label>
+                <label class="rp-permission"><input type="checkbox" />Profiles.verify</label>
+              </article>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Orders</span><span
+                    class="rp-group-count">0/16</span></header>
+                <label class="rp-permission"><input type="checkbox" />Orders.view</label>
+                <label class="rp-permission"><input type="checkbox" />Orders.create</label>
+                <label class="rp-permission"><input type="checkbox" />Orders.update</label>
+              </article>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Invoices</span><span
+                    class="rp-group-count">0/12</span></header>
+                <label class="rp-permission"><input type="checkbox" />Invoices.view</label>
+                <label class="rp-permission"><input type="checkbox" />Invoices.send</label>
+                <label class="rp-permission"><input type="checkbox" />Invoices.manage</label>
+              </article>
+              <article class="rp-group">
+                <header class="rp-group-head"><span><span class="rp-group-icon"></span>Settings</span><span
+                    class="rp-group-count">0/8</span></header>
+                <label class="rp-permission"><input type="checkbox" />Settings.view</label>
+                <label class="rp-permission"><input type="checkbox" />Settings.update</label>
+                <label class="rp-permission"><input type="checkbox" />Settings.backup</label>
+              </article>
+            </div>
+          </div>
+
+          <div data-rp-panel="roles" hidden>
+            <div class="rp-table-wrap">
+              <table class="rp-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Role</th>
+                    <th>Slug</th>
+                    <th>Description</th>
+                    <th>Users</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-coral">SA</span>Super Admin</div>
+                    </td>
+                    <td><code>super-admin</code></td>
+                    <td>Full administrative access</td>
+                    <td><span class="badge badge--coral">1</span></td>
+                    <td><span class="badge badge--green">Active</span></td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-mint">A</span>Admin</div>
+                    </td>
+                    <td><code>admin</code></td>
+                    <td>Staff administrator</td>
+                    <td><span class="badge">0</span></td>
+                    <td><span class="badge badge--green">Active</span></td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-yellow">M</span>Member</div>
+                    </td>
+                    <td><code>member</code></td>
+                    <td>Regular user / member</td>
+                    <td><span class="badge badge--yellow">226</span></td>
+                    <td><span class="badge badge--green">Active</span></td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-green">MG</span>Manager</div>
+                    </td>
+                    <td><code>manager</code></td>
+                    <td>Platform manager</td>
+                    <td><span class="badge badge--yellow">1</span></td>
+                    <td><span class="badge badge--green">Active</span></td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div data-rp-panel="groups" hidden>
+            <div class="rp-table-wrap">
+              <table class="rp-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Group</th>
+                    <th>Slug</th>
+                    <th>Permissions</th>
+                    <th>Order</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-coral">D</span>Dashboard</div>
+                    </td>
+                    <td><code>dashboard</code></td>
+                    <td><span class="badge badge--coral">2</span></td>
+                    <td>1</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-mint">U</span>Users</div>
+                    </td>
+                    <td><code>users</code></td>
+                    <td><span class="badge badge--coral">19</span></td>
+                    <td>2</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>
+                      <div class="rp-group-name"><span class="avatar tone-yellow">P</span>Profiles</div>
+                    </td>
+                    <td><code>profiles</code></td>
+                    <td><span class="badge badge--yellow">3</span></td>
+                    <td>3</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-eye"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-pencil" aria-hidden="true"></i></button><button
+                          class="icon-btn"><i class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div data-rp-panel="permissions" hidden>
+            <div class="rp-table-wrap">
+              <table class="rp-table">
+                <thead>
+                  <tr>
+                    <th>#</th>
+                    <th>Permission</th>
+                    <th>Slug</th>
+                    <th>Group</th>
+                    <th>Order</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td><strong>Dashboard.view</strong></td>
+                    <td><code>dashboard.view</code></td>
+                    <td>Dashboard</td>
+                    <td>1</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-pencil"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td><strong>Dashboard.manage</strong></td>
+                    <td><code>dashboard.manage</code></td>
+                    <td>Dashboard</td>
+                    <td>2</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-pencil"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td><strong>Users.view</strong></td>
+                    <td><code>users.view</code></td>
+                    <td>Users</td>
+                    <td>1</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-pencil"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>4</td>
+                    <td><strong>Users.manage</strong></td>
+                    <td><code>users.manage</code></td>
+                    <td>Users</td>
+                    <td>2</td>
+                    <td>
+                      <div class="rp-table-actions"><button class="icon-btn"><i class="icon icon--sm bi bi-pencil"
+                            aria-hidden="true"></i></button><button class="icon-btn"><i
+                            class="icon icon--sm bi bi-trash3" aria-hidden="true"></i></button></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <footer class="rp-footer-note"><span>Changes are applied after saving.</span><span>© 2026 Trombone
+              Admin</span></footer>
+        </section>
+        <footer class="footer"><span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+  <script src="js/main.js"></script>
+  <script>
+    (() => {
+      const tabs = document.querySelectorAll("[data-rp-tab]");
+      const panels = document.querySelectorAll("[data-rp-panel]");
+      const title = document.querySelector("[data-rp-title]");
+      const subtitle = document.querySelector("[data-rp-subtitle]");
+      const titles = {
+        "role-matrix": ["Role Wise Permission", "Select a permission group for each role."],
+        "roles": ["All Roles", "Create a new role and assign permissions."],
+        "groups": ["All Permission Groups", "Organise permissions under each group."],
+        "permissions": ["Permissions", "Manage permissions and their groups."]
+      };
+      tabs.forEach((tab) => tab.addEventListener("click", () => {
+        tabs.forEach((item) => { item.classList.remove("is-active"); item.setAttribute("aria-selected", "false"); });
+        tab.classList.add("is-active");
+        tab.setAttribute("aria-selected", "true");
+        panels.forEach((panel) => panel.hidden = panel.dataset.rpPanel !== tab.dataset.rpTab);
+        title.textContent = titles[tab.dataset.rpTab][0];
+        subtitle.textContent = titles[tab.dataset.rpTab][1];
+      }));
+
+      const roleTabs = document.querySelectorAll("[data-role-tab]");
+      const roleName = document.querySelector("[data-rp-role-name]");
+      roleTabs.forEach((tab) => tab.addEventListener("click", () => {
+        roleTabs.forEach((item) => item.classList.remove("is-active"));
+        tab.classList.add("is-active");
+        roleName.textContent = tab.dataset.roleTab;
+      }));
+
+      const checkboxes = [...document.querySelectorAll("[data-rp-matrix] input[type='checkbox']")];
+      const selected = document.querySelector("[data-rp-selected]");
+      const updateSelected = () => {
+        const count = checkboxes.filter((box) => box.checked).length;
+        selected.textContent = `${count} / 203`;
+        document.querySelectorAll(".rp-group").forEach((group) => {
+          const boxes = [...group.querySelectorAll("input[type='checkbox']")];
+          const checked = boxes.filter((box) => box.checked).length;
+          group.querySelector(".rp-group-count").textContent = `${checked}/${boxes.length}`;
+        });
+      };
+      checkboxes.forEach((box) => box.addEventListener("change", updateSelected));
+      document.querySelector("[data-rp-select-all]").addEventListener("click", (event) => {
+        const shouldCheck = checkboxes.some((box) => !box.checked);
+        checkboxes.forEach((box) => box.checked = shouldCheck);
+        event.currentTarget.textContent = shouldCheck ? "Clear All" : "Select All";
+        updateSelected();
+      });
+      document.querySelector("[data-rp-reset]").addEventListener("click", () => {
+        checkboxes.forEach((box) => box.checked = false);
+        updateSelected();
+      });
+      document.querySelector("[data-rp-save]").addEventListener("click", () => {
+        const region = document.querySelector("#toastRegion");
+        const toast = document.createElement("div");
+        toast.className = "toast";
+        toast.style.setProperty("--tone", "var(--green)");
+        toast.innerHTML = '<span class="dot" style="--tone:var(--green);border-color:#0e0e0e"></span><span>Permissions saved</span>';
+        region.appendChild(toast);
+        setTimeout(() => toast.remove(), 3200);
+      });
+    })();
+  </script>
+</body>
+
+</html>

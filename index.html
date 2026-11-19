@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <meta name="theme-color" content="#0e0e0e" />
+
+
+
+  <!-- Google Fonts : Bricolage Grotesque (titres, chiffres) + DM Sans (texte) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+
+  <div class="app" id="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+      <a href="index.html" class="brand">
+        <img src="images/logo.png" alt="">
+      </a>
+      <a href="index.html" class="brand sidebar-close">
+        <img src="images/logo-1.png" alt="">
+      </a>
+
+      <nav aria-label="Sections">
+        <div class="nav-group">
+          <span class="nav-label">Overview</span>
+          <a class="nav-link" href="index.html" aria-current="page" title="Dashboard">
+            <i class="icon bi bi-house" aria-hidden="true"></i>
+            <span class="nav-text">Dashboard</span>
+          </a>
+        </div>
+        <div class="nav-group">
+
+          <a class="nav-link" href="members.html" title="Orders">
+            <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+            <span class="nav-text">Members</span>
+            <span class="nav-count">12</span>
+          </a>
+          <a class="nav-link" href="invoices.html" title="Invoices">
+            <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+            <span class="nav-text">Invoices</span>
+          </a>
+          <a class="nav-link" href="matches.html" title="Customers">
+            <i class="icon bi bi-ladder" aria-hidden="true"></i>
+            <span class="nav-text">Matches</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Operations</span>
+          <!-- <a class="nav-link" href="products.html" title="Products & stock">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Products &amp; stock</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+          <a class="nav-link" href="tasks.html" title="Tasks">
+            <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+            <span class="nav-text">Tasks</span>
+            <span class="nav-count">8</span>
+          </a>
+          <a class="nav-link" href="calendar.html" title="Calendar">
+            <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+            <span class="nav-text">Calendar</span>
+          </a>
+        </div>
+        <div class="nav-group">
+          <span class="nav-label">Workspace</span>
+          <a class="nav-link" href="settings.html" title="Settings">
+            <i class="icon bi bi-sliders" aria-hidden="true"></i>
+            <span class="nav-text">Settings</span>
+          </a>
+          <a class="nav-link" href="roles-permissions.html"><i class="icon bi bi-lock" aria-hidden="true"></i><span
+              class="nav-text">Roles &amp; permissions</span></a>
+
+
+      </nav>
+
+
+
+      <div class="sidebar-user">
+        <span class="avatar tone-coral">AK</span>
+        <div class="sidebar-user-info">
+          <strong>Anna Keller</strong>
+          <span>Operations manager</span>
+        </div>
+      </div>
+    </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <div class="main">
+
+      <header class="topbar">
+        <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open aria-controls="sidebar"
+          aria-expanded="false">
+          <i class="icon bi bi-list" aria-hidden="true"></i>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+        
+        <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse
+          aria-controls="sidebar" aria-pressed="false">
+          <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+          <span class="visually-hidden">Collapse sidebar</span>
+        </button>
+
+
+        <div class="topbar-actions">
+                    <a href="massege.html">
+                        <button type="button" class="icon-btn" aria-pressed="false">
+                            <div class="under-msg" aria-hidden="true">4</div>
+                            <i class="bi bi-messenger"></i>
+                        </button>
+                    </a>
+
+
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown aria-expanded="false" aria-controls="notifMenu">
+              <i class="icon bi bi-bell" aria-hidden="true"></i>
+              <span class="ping" aria-hidden="true"></span>
+              <span class="visually-hidden">Notifications (3 unread)</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+              <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+              <ul class="notif-list" role="list">
+                <li>
+                  <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
+                      aria-hidden="true"></i></span>
+                  <div><strong>INV-2048 is 12 days overdue</strong><time>8 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-mint">JM</span>
+                  <div><strong>Jules</strong> moved Ã¢â‚¬Å“Supplier auditÃ¢â‚¬Â to Review<time>32 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-yellow">SB</span>
+                  <div><strong>Sofia</strong> approved purchase order PO-311<time>1 h ago</time></div>
+                </li>
+              </ul>
+              <hr />
+              <a href="tasks.html">See all activity <i class="icon icon--sm bi bi-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
+              <span class="avatar avatar--sm tone-coral">AK</span>
+              <span class="user-name">Anna</span>
+              <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" id="userMenu">
+              <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i> Profile</a>
+              <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i> Settings</a>
+              
+              <hr />
+              <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <!-- En-tÃƒÂªte : message d'accueil + filtre de pÃƒÂ©riode -->
+        <div class="page-head">
+          <div>
+            <h1><span data-greeting>Good morning</span>, <span class="marker">Astha</span></h1>
+          </div>
+        </div>
+
+        <!-- 1. Indicateurs clÃƒÂ©s -->
+        <section class="grid" aria-label="Key metrics">
+          <article class="card kpi col-3 xl-col-6">
+            <div class="kpi-top">
+              <span class="kpi-label"><span class="kpi-icon tone-yellow"><i class="icon bi bi-wallet2"
+                    aria-hidden="true"></i></span> Revenue</span>
+              <span class="delta" data-kpi-delta="revenue"><i class="icon bi bi-arrow-up" aria-hidden="true"></i>
+                <span>12.4%</span></span>
+            </div>
+            <div class="kpi-bottom">
+              <div>
+                <div class="kpi-value" data-kpi="revenue">$184,320</div>
+                <div class="kpi-note" data-kpi-note>vs. previous 30 days</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card kpi col-3 xl-col-6">
+            <div class="kpi-top">
+              <span class="kpi-label"><span class="kpi-icon tone-coral"><i class="icon bi bi-cart3"
+                    aria-hidden="true"></i></span> Orders</span>
+              <span class="delta" data-kpi-delta="orders"><i class="icon bi bi-arrow-up" aria-hidden="true"></i>
+                <span>8.1%</span></span>
+            </div>
+            <div class="kpi-bottom">
+              <div>
+                <div class="kpi-value" data-kpi="orders">1,286</div>
+                <div class="kpi-note" data-kpi-note>vs. previous 30 days</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card kpi col-3 xl-col-6">
+            <div class="kpi-top">
+              <span class="kpi-label"><span class="kpi-icon tone-green"><i class="icon bi bi-percent"
+                    aria-hidden="true"></i></span> Gross margin</span>
+              <span class="delta" data-kpi-delta="margin"><i class="icon bi bi-arrow-up" aria-hidden="true"></i>
+                <span>1.6 pts</span></span>
+            </div>
+            <div class="kpi-bottom">
+              <div>
+                <div class="kpi-value" data-kpi="margin">42.8%</div>
+                <div class="kpi-note" data-kpi-note>vs. previous 30 days</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="card kpi col-3 xl-col-6">
+            <div class="kpi-top">
+              <span class="kpi-label"><span class="kpi-icon tone-mint"><i class="icon bi bi-receipt"
+                    aria-hidden="true"></i></span> Outstanding</span>
+              <span class="delta" data-kpi-delta="outstanding"><i class="icon bi bi-arrow-down" aria-hidden="true"></i>
+                <span>4.3%</span></span>
+            </div>
+            <div class="kpi-bottom">
+              <div>
+                <div class="kpi-value" data-kpi="outstanding">$36,940</div>
+                <div class="kpi-note" data-kpi-note>vs. previous 30 days</div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <!-- 3. To-do ÃƒÂ©quipe + projets -->
+        <section class="grid">
+          <article class="card col-7 lg-col-12" aria-labelledby="todoTitle">
+            <div class="card-head mb-2xs">
+              <div>
+                <h2 class="card-title" id="todoTitle">Team to-do</h2>
+                <p class="card-subtitle"><b data-todo-done>2</b> of <b data-todo-total>6</b> done today</p>
+              </div>
+              <div class="cluster">
+                <div class="ring ring--sm tone-coral" style="--value: 33" data-todo-ring role="img"
+                  aria-label="33 percent complete"><span>33%</span></div>
+                <a class="btn btn--ghost btn--sm" href="tasks.html">Board <i class="icon icon--sm bi bi-arrow-right"
+                    aria-hidden="true"></i></a>
+              </div>
+            </div>
+
+            <ul class="todo-list" role="list" data-todo>
+              <li>
+                <label class="checkbox"><input type="checkbox"
+                    aria-label="Mark as done: Reconcile August bank statements" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-coral"></span> <span>Reconcile August bank
+                      statements</span></span>
+                  <span class="todo-meta">
+                    <span class="due is-late">Overdue</span>
+                    <span class="progress tone-coral"><span style="--value: 75%"></span></span>
+                    <b>75%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-mint" title="Jules Martin">JM</span>
+              </li>
+              <li>
+                <label class="checkbox"><input type="checkbox"
+                    aria-label="Mark as done: Send Q4 price list to wholesalers" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-yellow"></span> <span>Send Q4 price list to
+                      wholesalers</span></span>
+                  <span class="todo-meta">
+                    <span class="due">Today</span>
+                    <span class="progress tone-yellow"><span style="--value: 40%"></span></span>
+                    <b>40%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-coral" title="Anna Keller">AK</span>
+              </li>
+              <li class="is-done">
+                <label class="checkbox"><input type="checkbox" checked
+                    aria-label="Mark as done: Approve purchase order PO-311" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-green"></span> <span>Approve purchase order
+                      PO-311</span></span>
+                  <span class="todo-meta">
+                    <span class="due">Today</span>
+                    <span class="progress tone-green"><span style="--value: 100%"></span></span>
+                    <b>100%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-yellow" title="Sofia Benali">SB</span>
+              </li>
+              <li>
+                <label class="checkbox"><input type="checkbox"
+                    aria-label="Mark as done: Count stock in warehouse B, aisles 4 to 9" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-mint"></span> <span>Count stock in warehouse B, aisles
+                      4 to 9</span></span>
+                  <span class="todo-meta">
+                    <span class="due">Tomorrow</span>
+                    <span class="progress tone-mint"><span style="--value: 55%"></span></span>
+                    <b>55%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-green" title="Noah Petit">NP</span>
+              </li>
+              <li class="is-done">
+                <label class="checkbox"><input type="checkbox" checked
+                    aria-label="Mark as done: Onboard new sales rep" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-yellow"></span> <span>Onboard new sales
+                      rep</span></span>
+                  <span class="todo-meta">
+                    <span class="due">Today</span>
+                    <span class="progress tone-yellow"><span style="--value: 100%"></span></span>
+                    <b>100%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-coral" title="Anna Keller">AK</span>
+              </li>
+              <li>
+                <label class="checkbox"><input type="checkbox"
+                    aria-label="Mark as done: Renew carrier contract with Northline Freight" /><i class="bi bi-check"
+                    aria-hidden="true"></i></label>
+                <div class="todo-body">
+                  <span class="todo-title"><span class="dot tone-green"></span> <span>Renew carrier contract with
+                      Northline Freight</span></span>
+                  <span class="todo-meta">
+                    <span class="due">Oct 3</span>
+                    <span class="progress tone-green"><span style="--value: 15%"></span></span>
+                    <b>15%</b>
+                  </span>
+                </div>
+                <span class="avatar avatar--sm tone-mint" title="Jules Martin">JM</span>
+              </li>
+            </ul>
+
+            <form class="todo-add" data-todo-add>
+              <label for="todoInput" class="visually-hidden">New task</label>
+              <input class="input" id="todoInput" type="text" placeholder="Add a task and press EnterÃ¢â‚¬Â¦"
+                autocomplete="off" />
+              <button type="submit" class="btn btn--sm"><i class="icon icon--sm bi bi-plus" aria-hidden="true"></i>
+                Add</button>
+            </form>
+          </article>
+
+          <article class="card col-5 lg-col-12" aria-labelledby="projTitle">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title" id="projTitle">Projects</h2>
+                <p class="card-subtitle">4 active · 1 at risk</p>
+              </div>
+              <div class="dropdown">
+                <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown aria-expanded="false"
+                  aria-controls="projMenu" aria-label="Project options"><i class="icon bi bi-three-dots"
+                    aria-hidden="true"></i></button>
+                <div class="dropdown-menu" id="projMenu">
+                  <a href="tasks.html"><i class="icon icon--sm bi bi-check2-square" aria-hidden="true"></i> Open task
+                    board</a>
+                  <button type="button" data-toast="Project created" data-toast-tone="yellow"><i
+                      class="icon icon--sm bi bi-plus" aria-hidden="true"></i> New project</button>
+                  <button type="button" data-toast="Projects exported as CSV" data-toast-tone="mint"><i
+                      class="icon icon--sm bi bi-download" aria-hidden="true"></i> Export</button>
+                </div>
+              </div>
+            </div>
+
+            <div class="project-list">
+              <div class="progress-row">
+                <span class="progress-label">Autumn collection launch</span>
+                <span class="progress-value">86%</span>
+                <div class="progress progress--lg tone-yellow" role="progressbar" aria-label="Autumn collection launch"
+                  aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"><span style="--value: 86%"></span></div>
+                <span class="subtle text-xs">12 of 14 tasks · due Oct 6</span>
+                <div class="avatar-stack"><span class="avatar avatar--sm tone-coral">AK</span><span
+                    class="avatar avatar--sm tone-mint">JM</span></div>
+              </div>
+
+              <div class="progress-row">
+                <span class="progress-label">Warehouse B relayout</span>
+                <span class="progress-value">58%</span>
+                <div class="progress progress--lg tone-mint" role="progressbar" aria-label="Warehouse B relayout"
+                  aria-valuenow="58" aria-valuemin="0" aria-valuemax="100"><span style="--value: 58%"></span></div>
+                <span class="subtle text-xs">7 of 12 tasks · due Oct 20</span>
+                <div class="avatar-stack"><span class="avatar avatar--sm tone-green">NP</span><span
+                    class="avatar avatar--sm tone-yellow">SB</span></div>
+              </div>
+
+              <div class="progress-row">
+                <span class="progress-label">ERP migration Ã¢â‚¬â€ accounting <span
+                    class="badge badge--coral ml-2xs">At risk</span></span>
+                <span class="progress-value">31%</span>
+                <div class="progress progress--lg progress--striped tone-coral" role="progressbar"
+                  aria-label="ERP migration, accounting" aria-valuenow="31" aria-valuemin="0" aria-valuemax="100"><span
+                    style="--value: 31%"></span></div>
+                <span class="subtle text-xs">5 of 16 tasks · due Oct 15</span>
+                <div class="avatar-stack"><span class="avatar avatar--sm tone-mint">JM</span><span
+                    class="avatar avatar--sm tone-coral">AK</span><span class="avatar avatar--sm tone-green">NP</span>
+                </div>
+              </div>
+
+              <div class="progress-row">
+                <span class="progress-label">Supplier onboarding portal</span>
+                <span class="progress-value">72%</span>
+                <div class="progress progress--lg tone-green" role="progressbar" aria-label="Supplier onboarding portal"
+                  aria-valuenow="72" aria-valuemin="0" aria-valuemax="100"><span style="--value: 72%"></span></div>
+                <span class="subtle text-xs">13 of 18 tasks · due Nov 2</span>
+                <div class="avatar-stack"><span class="avatar avatar--sm tone-yellow">SB</span></div>
+              </div>
+            </div>
+
+            <div class="card-foot">
+              <span>Team capacity this week</span>
+              <b class="num text-ink">78%</b>
+            </div>
+            <div class="segments mt-2xs" role="img"
+              aria-label="Capacity split: sales 34%, operations 26%, finance 18%, free 22%">
+              <span class="tone-yellow" style="--w: 34"></span>
+              <span class="tone-coral" style="--w: 26"></span>
+              <span class="tone-mint" style="--w: 18"></span>
+              <span class="tone-ink" style="--w: 22; --tone: var(--color-surface-3)"></span>
+            </div>
+            <ul class="legend mt-2xs" role="list">
+              <li><span class="dot dot--square tone-yellow"></span> Sales</li>
+              <li><span class="dot dot--square tone-coral"></span> Operations</li>
+              <li><span class="dot dot--square tone-mint"></span> Finance</li>
+              <li><span class="dot dot--square" style="--tone: var(--color-surface-3)"></span> Free</li>
+            </ul>
+          </article>
+        </section>
+
+        <!-- 4. Canaux de vente + flux de trÃƒÂ©sorerie -->
+        <section class="grid">
+          <article class="card col-5 lg-col-12" aria-labelledby="feedTitle">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title" id="feedTitle">Activity</h2>
+                <p class="card-subtitle">What your team did today</p>
+              </div>
+              <span class="badge badge--dark">Live</span>
+            </div>
+            <ol class="feed" role="list">
+              <li>
+                <span class="feed-icon tone-green"><i class="icon bi bi-check2" aria-hidden="true"></i></span>
+                <div><strong>Sofia</strong> approved purchase order <strong>PO-311</strong> ($14,200)<time>10:42</time>
+                </div>
+              </li>
+              <li>
+                <span class="feed-icon tone-yellow"><i class="icon bi bi-truck" aria-hidden="true"></i></span>
+                <div>Order <a class="link" href="orders.html">#SO-4821</a> left warehouse A with Northline
+                  Freight<time>10:15</time></div>
+              </li>
+              <li>
+                <span class="feed-icon tone-coral"><i class="icon bi bi-exclamation-triangle"
+                    aria-hidden="true"></i></span>
+                <div>Payment failed for <strong>Studio Tessa</strong> Ã¢â‚¬â€ retry scheduled<time>09:58</time></div>
+              </li>
+              <li>
+                <span class="feed-icon tone-mint"><i class="icon bi bi-people" aria-hidden="true"></i></span>
+                <div><strong>Jules</strong> added a new customer: <strong>Casa Alta</strong><time>09:20</time></div>
+              </li>
+              <li>
+                <span class="feed-icon"><i class="icon bi bi-file-earmark-text" aria-hidden="true"></i></span>
+                <div>Invoice <a class="link" href="invoice.html">INV-2051</a> sent to Nordhaus
+                  Interiors<time>08:47</time></div>
+              </li>
+            </ol>
+          </article>
+
+          <article class="card col-7 lg-col-12" aria-labelledby="flowTitle">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title" id="flowTitle">Cash flow</h2>
+                <p class="card-subtitle">Monthly cash in vs. cash out, last 12 months</p>
+              </div>
+              <ul class="legend" role="list">
+                <li><span class="legend-line" style="--tone: var(--chart-ink)"></span> Cash in</li>
+                <li><span class="legend-line is-dashed" style="--tone: var(--coral)"></span> Cash out</li>
+              </ul>
+            </div>
+            <div class="chart" id="cashflowChart" style="--chart-height: 250px" role="img"
+              aria-label="Cash flow line chart"></div>
+          </article>
+        </section>
+
+        <!-- 5. DerniÃƒÂ¨res commandes + alertes de stock -->
+        <section class="grid">
+          <article class="card card--flush col-8 lg-col-12" aria-labelledby="ordersTitle">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title" id="ordersTitle">Recent orders</h2>
+                <p class="card-subtitle">Last 24 hours</p>
+              </div>
+              <a class="btn btn--outline btn--sm" href="orders.html">View all <i class="icon icon--sm bi bi-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+            <div class="table-wrap">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">Order</th>
+                    <th scope="col">Customer</th>
+                    <th scope="col">Items</th>
+                    <th scope="col">Status</th>
+                    <th scope="col" class="text-right">Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="mono">#SO-4821</td>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-yellow">GM</span>
+                        <div><strong>Galerie Mercier</strong><span>Paris, FR</span></div>
+                      </div>
+                    </td>
+                    <td class="num">24</td>
+                    <td><span class="badge badge--green">Shipped</span></td>
+                    <td class="text-right mono">$8,420.00</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#SO-4820</td>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-mint">NH</span>
+                        <div><strong>Nordhaus Interiors</strong><span>Hamburg, DE</span></div>
+                      </div>
+                    </td>
+                    <td class="num">6</td>
+                    <td><span class="badge badge--yellow">Processing</span></td>
+                    <td class="text-right mono">$1,935.50</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#SO-4819</td>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span>
+                        <div><strong>Studio Tessa</strong><span>Lyon, FR</span></div>
+                      </div>
+                    </td>
+                    <td class="num">2</td>
+                    <td><span class="badge badge--coral">Payment failed</span></td>
+                    <td class="text-right mono">$489.00</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#SO-4818</td>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm tone-green">CA</span>
+                        <div><strong>Casa Alta</strong><span>Madrid, ES</span></div>
+                      </div>
+                    </td>
+                    <td class="num">12</td>
+                    <td><span class="badge badge--mint">Ready to ship</span></td>
+                    <td class="text-right mono">$3,112.80</td>
+                  </tr>
+                  <tr>
+                    <td class="mono">#SO-4817</td>
+                    <td>
+                      <div class="cell-main"><span class="avatar avatar--sm">OW</span>
+                        <div><strong>Oakwood &amp; Co.</strong><span>London, UK</span></div>
+                      </div>
+                    </td>
+                    <td class="num">40</td>
+                    <td><span class="badge">Draft</span></td>
+                    <td class="text-right mono">$12,760.00</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </article>
+
+          <article class="card col-4 lg-col-12" aria-labelledby="stockTitle">
+            <div class="card-head">
+              <div>
+                <h2 class="card-title" id="stockTitle">Low stock <span class="badge badge--coral">5</span></h2>
+                <p class="card-subtitle">Below reorder point</p>
+              </div>
+              <button type="button" class="btn btn--accent btn--sm" data-toast="Purchase order draft created for 5 SKUs"
+                data-toast-tone="yellow">Reorder</button>
+            </div>
+            <ul class="stock-list" role="list">
+              <li>
+                <span class="thumb tone-yellow"><i class="icon bi bi-lightbulb" aria-hidden="true"></i></span>
+                <div class="stock-info">
+                  <strong>Arc floor lamp Ã¢â‚¬â€ brass</strong>
+                  <div class="progress progress--thin tone-coral"><span style="--value: 8%"></span></div>
+                </div>
+                <span class="num text-sm"><b>4</b> / 50</span>
+              </li>
+              <li>
+                <span class="thumb tone-coral"><i class="icon bi bi-lightbulb" aria-hidden="true"></i></span>
+                <div class="stock-info">
+                  <strong>Pleated shade, linen 40 cm</strong>
+                  <div class="progress progress--thin tone-coral"><span style="--value: 14%"></span></div>
+                </div>
+                <span class="num text-sm"><b>7</b> / 50</span>
+              </li>
+              <li>
+                <span class="thumb tone-mint"><i class="icon bi bi-box-seam" aria-hidden="true"></i></span>
+                <div class="stock-info">
+                  <strong>E27 bulb, warm 2700K (x6)</strong>
+                  <div class="progress progress--thin tone-yellow"><span style="--value: 22%"></span></div>
+                </div>
+                <span class="num text-sm"><b>44</b> / 200</span>
+              </li>
+              <li>
+                <span class="thumb tone-green"><i class="icon bi bi-lightbulb" aria-hidden="true"></i></span>
+                <div class="stock-info">
+                  <strong>Mushroom table lamp Ã¢â‚¬â€ sage</strong>
+                  <div class="progress progress--thin tone-yellow"><span style="--value: 26%"></span></div>
+                </div>
+                <span class="num text-sm"><b>13</b> / 50</span>
+              </li>
+              <li>
+                <span class="thumb tone-yellow"><i class="icon bi bi-layers" aria-hidden="true"></i></span>
+                <div class="stock-info">
+                  <strong>Textile cable, black 3 m</strong>
+                  <div class="progress progress--thin tone-yellow"><span style="--value: 30%"></span></div>
+                </div>
+                <span class="num text-sm"><b>60</b> / 200</span>
+              </li>
+            </ul>
+          </article>
+        </section>
+
+
+        <!-- Modale : nouvelle commande -->
+        <dialog class="modal" id="newOrderModal" aria-labelledby="newOrderTitle">
+          <form method="dialog" data-demo-form data-toast="Order #SO-4822 created">
+            <div class="modal-head">
+              <div>
+                <span class="sticker tone-yellow mb-2xs">Quick create</span>
+                <h2 id="newOrderTitle">New sales order</h2>
+              </div>
+              <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close aria-label="Close"><i
+                  class="icon bi bi-x" aria-hidden="true"></i></button>
+            </div>
+            <div class="form-grid">
+              <div class="field span-2">
+                <label for="noCustomer">Customer</label>
+                <select class="select" id="noCustomer" required>
+                  <option value="">Choose a customerÃ¢â‚¬Â¦</option>
+                  <option>Galerie Mercier</option>
+                  <option>Nordhaus Interiors</option>
+                  <option>Studio Tessa</option>
+                  <option>Casa Alta</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="noDate">Delivery date</label>
+                <input class="input" id="noDate" type="date" required />
+              </div>
+              <div class="field">
+                <label for="noWarehouse">Warehouse</label>
+                <select class="select" id="noWarehouse">
+                  <option>Warehouse A Ã¢â‚¬â€ Lyon</option>
+                  <option>Warehouse B Ã¢â‚¬â€ Lille</option>
+                </select>
+              </div>
+              <div class="field span-2">
+                <label for="noNotes">Notes</label>
+                <textarea class="textarea" id="noNotes" placeholder="Anything the warehouse should know?"></textarea>
+              </div>
+            </div>
+            <div class="modal-actions">
+              <button type="button" class="btn btn--ghost" data-modal-close>Cancel</button>
+              <button type="submit" class="btn">Create order</button>
+            </div>
+          </form>
+        </dialog>
+
+        <footer class="footer">
+          <span>© 2026 Astha Marriage Burew‚ Developed by Technext Technosoft Pvt. Ltd.</span>
+
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+  <script src="js/charts.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+
+</html>
