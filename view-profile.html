@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Membership Invoice | Astha Marriage Bureau</title>
+  <meta name="description" content="Printable membership fee invoice with payment status and history." />
+  <meta name="theme-color" content="#0e0e0e" />
+
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com/" />
+  <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/variables.css" />
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+
+  <div class="app" id="app">
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="">
+            </a>
+            <a href="index.html" class="brand sidebar-close">
+                <img src="images/logo-1.png" alt="">
+            </a>
+
+            <nav aria-label="Sections">
+                <div class="nav-group">
+                    <span class="nav-label">Overview</span>
+                    <a class="nav-link" href="index.html" title="Dashboard">
+                        <i class="icon bi bi-house" aria-hidden="true"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-group">
+
+                    <a class="nav-link" href="leads.html" title="Leads">
+                        <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+                        <span class="nav-text">Leads</span>
+                        <span class="nav-count">12</span>
+                    </a>
+                    <a class="nav-link" href="customer-management.html" aria-current="page" title="Customer Management">
+                        <i class="icon bi bi-people" aria-hidden="true"></i>
+                        <span class="nav-text">Customer Management</span>
+                    </a>
+                    <a class="nav-link" href="membership.html" title="Membership fees">
+                        <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+                        <span class="nav-text">Membership fees</span>
+                    </a>
+                    
+          <a class="nav-link" href="incoming-call.html" title="Incoming Call">
+            <i class="icon bi bi-telephone-inbound" aria-hidden="true"></i>
+            <span class="nav-text">Incoming Call</span>
+          </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-label">Lead management</span>
+                    <!-- <a class="nav-link" href="products.html" title="Membership plans">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Membership plans</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+                    <a class="nav-link" href="tasks.html" title="Tasks">
+                        <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+                        <span class="nav-text">Task</span>
+                        <span class="nav-count">8</span>
+                    </a>
+                    <a class="nav-link" href="calendar.html" title="Calendar">
+                        <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+                        <span class="nav-text">Appointments</span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-label">Workspace</span>
+                    <a class="nav-link" href="settings.html" title="Settings">
+                        <i class="icon bi bi-sliders" aria-hidden="true"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                    <a class="nav-link" href="roles-permissions.html"><i class="icon bi bi-lock"
+                            aria-hidden="true"></i><span class="nav-text">Roles &amp; permissions</span></a>
+
+
+            </nav>
+
+
+
+            <div class="sidebar-user">
+                <span class="avatar tone-coral">AK</span>
+                <div class="sidebar-user-info">
+                    <strong>Asha Sen</strong>
+                    <span>Matrimonial Consultant</span>
+                </div>
+            </div>
+        </aside>
+    <div class="sidebar-backdrop" data-sidebar-close></div>
+
+    <div class="main">
+
+      <header class="topbar">
+        <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open aria-controls="sidebar"
+          aria-expanded="false">
+          <i class="icon bi bi-list" aria-hidden="true"></i>
+          <span class="visually-hidden">Open navigation</span>
+        </button>
+
+        <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse
+          aria-controls="sidebar" aria-pressed="false">
+          <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+          <span class="visually-hidden">Collapse sidebar</span>
+        </button>
+
+
+        <div class="topbar-actions">
+          <a href="massege.html">
+            <button type="button" class="icon-btn" aria-pressed="false">
+              <div class="under-msg" aria-hidden="true">4</div>
+              <i class="bi bi-messenger"></i>
+            </button>
+          </a>
+
+
+          <div class="dropdown">
+            <button type="button" class="icon-btn" data-dropdown aria-expanded="false" aria-controls="notifMenu">
+              <i class="icon bi bi-bell" aria-hidden="true"></i>
+              <span class="ping" aria-hidden="true"></span>
+              <span class="visually-hidden">Notifications (3 unread)</span>
+            </button>
+            <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+              <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+              <ul class="notif-list" role="list">
+                <li>
+                  <span class="feed-icon tone-coral"><i class="icon icon--sm bi bi-exclamation-triangle"
+                      aria-hidden="true"></i></span>
+                  <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-mint">JM</span>
+                  <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time></div>
+                </li>
+                <li>
+                  <span class="avatar avatar--sm tone-yellow">SB</span>
+                  <div><strong>Priya</strong> approved membership plan INTRO-311<time>1 h ago</time></div>
+                </li>
+              </ul>
+              <hr />
+              <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
+                  aria-hidden="true"></i></a>
+            </div>
+          </div>
+
+          <div class="dropdown">
+            <button type="button" class="user-btn" data-dropdown aria-expanded="false" aria-controls="userMenu">
+              <span class="avatar avatar--sm tone-coral">AK</span>
+              <span class="user-name">Asha</span>
+              <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="dropdown-menu" id="userMenu">
+              <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i> Profile</a>
+              <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i> Settings</a>
+
+              <hr />
+              <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i> Sign out</a>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="content" id="main-content">
+        <div class="page-head">
+          <div>
+            <ol class="breadcrumb">
+              <li><a href="index.html">Dashboard</a></li>
+              <li aria-current="page">Profile Details</li>
+            </ol>
+            <h1>Profile <span class="marker">Details</span></h1>
+          </div>
+          <div class="page-actions">
+            <button type="button" class="btn btn--outline" onclick="window.print()"><i class="icon bi bi-printer"
+                aria-hidden="true"></i> Print</button>
+            <button type="button" class="btn btn--outline" data-toast="PDF downloaded" data-toast-tone="mint"><i
+                class="icon bi bi-download" aria-hidden="true"></i> PDF</button>
+            <button type="button" class="btn" data-toast="Invoice sent to contact@asthamarriage.in"><i
+                class="icon bi bi-send" aria-hidden="true"></i> Send</button>
+          </div>
+        </div>
+
+        <div class="invoice-layout">
+  <article class="card invoice">
+    <div class="invoice-top">
+      <div class="prof-det">
+        <div class="pro-det-img">
+            <img src="images/pro-1.jpg" alt="">
+        </div>
+        <div class="brand brand--doc">
+          <span>A Shab Ghosh</span>
+        </div>
+        <p class="muted mt-2xs text-sm">
+          Durgapur, West Bengal, India<br />
+          Profile managed by Self<br />
+          Mother Tongue: Bengali
+        </p>
+      </div>
+      <div class="invoice-id">
+        <span class="badge badge--mint">Active Profile</span>
+        <h2>ASTHA-2051</h2>
+        <p class="muted text-sm">Member Profile</p>
+      </div>
+    </div>
+
+    <div class="invoice-parties">
+      <div>
+        <h3>Personal Details</h3>
+        <strong>A Shab Ghosh</strong>
+        Height: 5ft 2in<br />
+        Date of Birth: 12 September 1999<br />
+        Marital Status: Never Married
+      </div>
+      <div>
+        <h3>Religion & Community</h3>
+        <strong>Hindu</strong>
+        Community: Bania<br />
+        Gotra: Kashyap<br />
+        Children: No
+      </div>
+      <div>
+        <h3>Professional Details</h3>
+        <strong>IT Professional</strong>
+        Private Sector<br />
+        Education: M.Com - Post Graduation<br />
+        Annual Income: Rs. 7.5 - 10 Lakh p.a
+      </div>
+    </div>
+
+    <div class="table-wrap">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Profile Information</th>
+            <th scope="col" class="text-right">Details</th>
+            <th scope="col" class="text-right">Category</th>
+            <th scope="col" class="text-right">Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Education</strong>
+              <div class="subtle text-sm">Academic background</div>
+            </td>
+            <td class="num text-right">M.Com</td>
+            <td class="text-right">Commerce</td>
+            <td class="text-right mono">Completed</td>
+          </tr>
+          <tr>
+            <td><strong>Career</strong>
+              <div class="subtle text-sm">Professional information</div>
+            </td>
+            <td class="num text-right">IT Professional</td>
+            <td class="text-right">Private Sector</td>
+            <td class="text-right mono">Working</td>
+          </tr>
+          <tr>
+            <td><strong>Family Background</strong>
+              <div class="subtle text-sm">Family type and values</div>
+            </td>
+            <td class="num text-right">Nuclear Family</td>
+            <td class="text-right">Upper Middle</td>
+            <td class="text-right mono">Durgapur</td>
+          </tr>
+          <tr>
+            <td><strong>Living Arrangement</strong>
+              <div class="subtle text-sm">Current family arrangement</div>
+            </td>
+            <td class="num text-right">With Parents</td>
+            <td class="text-right">Family</td>
+            <td class="text-right mono">Available</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="totals">
+      <div>
+        <span class="muted">Religion</span>
+        <span>Hindu</span>
+      </div>
+      <div>
+        <span class="muted">Community</span>
+        <span>Bania</span>
+      </div>
+      <div>
+        <span class="muted">Mother Tongue</span>
+        <span>Bengali</span>
+      </div>
+      <div class="totals-grand">
+        <span>Annual Income</span>
+        <span>Rs. 7.5 - 10 Lakh p.a</span>
+      </div>
+    </div>
+
+    <p class="muted text-sm">
+      About Her: She is a simple, caring and family-oriented person. She believes
+      in maintaining a healthy balance between personal and professional life.
+      She enjoys spending time with family and close friends and values honesty,
+      understanding and mutual respect in a relationship.
+    </p>
+  </article>
+
+  <aside class="stack" aria-label="Profile details">
+    <article class="card">
+      <h2 class="card-title mb-sm">Family Details</h2>
+      <div class="progress-row">
+        <span class="progress-label">Family Type</span>
+        <span class="progress-value">Nuclear</span>
+      </div>
+      <div class="progress-row">
+        <span class="progress-label">Family Values</span>
+        <span class="progress-value">Moderate</span>
+      </div>
+      <div class="progress-row">
+        <span class="progress-label">Father</span>
+        <span class="progress-value">Businessman</span>
+      </div>
+      <div class="progress-row">
+        <span class="progress-label">Mother</span>
+        <span class="progress-value">Homemaker</span>
+      </div>
+      <div class="progress-row">
+        <span class="progress-label">Siblings</span>
+        <span class="progress-value">One Younger Brother</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title mb-sm">Lifestyle & Habits</h2>
+      <ol class="timeline-mini" role="list">
+        <li>
+          <span class="feed-icon tone-mint"><i class="icon bi bi-cup-hot" aria-hidden="true"></i></span>
+          <div>Does not drink<time>Drinking habits</time></div>
+        </li>
+        <li>
+          <span class="feed-icon tone-yellow"><i class="icon bi bi-egg-fried" aria-hidden="true"></i></span>
+          <div>Non Vegetarian<time>Food preference</time></div>
+        </li>
+        <li>
+          <span class="feed-icon"><i class="icon bi bi-ban" aria-hidden="true"></i></span>
+          <div>Does not smoke<time>Smoking habits</time></div>
+        </li>
+        <li>
+          <span class="feed-icon tone-mint"><i class="icon bi bi-house" aria-hidden="true"></i></span>
+          <div>Owns a house and a car<time>Assets</time></div>
+        </li>
+      </ol>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title mb-2xs">About Family</h2>
+      <p class="muted text-sm">
+        I belong to an upper-middle-class family, and family will always be my
+        greatest priority.
+      </p>
+    </article>
+
+    <article class="card">
+      <h2 class="card-title mb-sm">Favourites & Interests</h2>
+      <p class="muted text-sm">
+        Listening to Music, Reading Books, Travelling, Photography, Cooking,
+        Singing and Spending Time with Family.
+      </p>
+    </article>
+  </aside>
+</div>
+
+        <footer class="footer">
+          <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
+
+        </footer>
+      </main>
+    </div>
+  </div>
+
+  <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+
+  <script src="js/main.js"></script>
+</body>
+
+
+</html>

@@ -1,0 +1,996 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lead Profiles | Astha Marriage Bureau</title>
+    <meta name="description"
+        content="Lead and member profile directory with search, status filters, sorting and bulk actions." />
+    <meta name="theme-color" content="#0e0e0e" />
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com/" />
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&amp;family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400&amp;display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.css" />
+</head>
+
+<body>
+
+
+    <div class="app" id="app">
+
+        <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+            <a href="index.html" class="brand">
+                <img src="images/logo.png" alt="">
+            </a>
+            <a href="index.html" class="brand sidebar-close">
+                <img src="images/logo-1.png" alt="">
+            </a>
+
+            <nav aria-label="Sections">
+                <div class="nav-group">
+                    <span class="nav-label">Overview</span>
+                    <a class="nav-link" href="index.html" title="Dashboard">
+                        <i class="icon bi bi-house" aria-hidden="true"></i>
+                        <span class="nav-text">Dashboard</span>
+                    </a>
+                </div>
+                <div class="nav-group">
+
+                    <a class="nav-link" href="leads.html" title="Leads">
+                        <i class="icon bi bi-person-plus" aria-hidden="true"></i>
+                        <span class="nav-text">Leads</span>
+                        <span class="nav-count">12</span>
+                    </a>
+                    <a class="nav-link" href="customer-management.html" aria-current="page" title="Customer Management">
+                        <i class="icon bi bi-people" aria-hidden="true"></i>
+                        <span class="nav-text">Customer Management</span>
+                    </a>
+                    <a class="nav-link" href="membership.html" title="Membership fees">
+                        <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
+                        <span class="nav-text">Membership fees</span>
+                    </a>
+
+                    <a class="nav-link" href="incoming-call.html" title="Incoming Call">
+                        <i class="icon bi bi-telephone-inbound" aria-hidden="true"></i>
+                        <span class="nav-text">Incoming Call</span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-label">Lead management</span>
+                    <!-- <a class="nav-link" href="products.html" title="Membership plans">
+            <i class="icon bi bi-box-seam" aria-hidden="true"></i>
+            <span class="nav-text">Membership plans</span>
+            <span class="nav-count nav-count--accent">5</span>
+          </a> -->
+                    <a class="nav-link" href="tasks.html" title="Tasks">
+                        <i class="icon bi bi-check2-square" aria-hidden="true"></i>
+                        <span class="nav-text">Task</span>
+                        <span class="nav-count">8</span>
+                    </a>
+                    <a class="nav-link" href="calendar.html" title="Calendar">
+                        <i class="icon bi bi-calendar3" aria-hidden="true"></i>
+                        <span class="nav-text">Appointments</span>
+                    </a>
+                </div>
+                <div class="nav-group">
+                    <span class="nav-label">Workspace</span>
+                    <a class="nav-link" href="settings.html" title="Settings">
+                        <i class="icon bi bi-sliders" aria-hidden="true"></i>
+                        <span class="nav-text">Settings</span>
+                    </a>
+                    <a class="nav-link" href="roles-permissions.html"><i class="icon bi bi-lock"
+                            aria-hidden="true"></i><span class="nav-text">Roles &amp; permissions</span></a>
+
+
+            </nav>
+
+
+
+            <div class="sidebar-user">
+                <span class="avatar tone-coral">AK</span>
+                <div class="sidebar-user-info">
+                    <strong>Asha Sen</strong>
+                    <span>Matrimonial Consultant</span>
+                </div>
+            </div>
+        </aside>
+        <div class="sidebar-backdrop" data-sidebar-close></div>
+
+        <div class="main">
+
+            <header class="topbar">
+                <button type="button" class="icon-btn icon-btn--ghost menu-toggle" data-sidebar-open
+                    aria-controls="sidebar" aria-expanded="false">
+                    <i class="icon bi bi-list" aria-hidden="true"></i>
+                    <span class="visually-hidden">Open navigation</span>
+                </button>
+
+                <button type="button" class="icon-btn icon-btn--ghost collapse-toggle" data-sidebar-collapse
+                    aria-controls="sidebar" aria-pressed="false">
+                    <i class="icon bi bi-layout-sidebar" aria-hidden="true"></i>
+                    <span class="visually-hidden">Collapse sidebar</span>
+                </button>
+
+
+                <div class="topbar-actions">
+                    <a href="massege.html">
+                        <button type="button" class="icon-btn" aria-pressed="false">
+                            <div class="under-msg" aria-hidden="true">4</div>
+                            <i class="bi bi-messenger"></i>
+                        </button>
+                    </a>
+
+
+                    <div class="dropdown">
+                        <button type="button" class="icon-btn" data-dropdown aria-expanded="false"
+                            aria-controls="notifMenu">
+                            <i class="icon bi bi-bell" aria-hidden="true"></i>
+                            <span class="ping" aria-hidden="true"></span>
+                            <span class="visually-hidden">Notifications (3 unread)</span>
+                        </button>
+                        <div class="dropdown-menu dropdown-menu--wide" id="notifMenu">
+                            <div class="menu-head">Notifications <span class="badge badge--coral">3 new</span></div>
+                            <ul class="notif-list" role="list">
+                                <li>
+                                    <span class="feed-icon tone-coral"><i
+                                            class="icon icon--sm bi bi-exclamation-triangle"
+                                            aria-hidden="true"></i></span>
+                                    <div><strong>Membership renewal is due in 12 days</strong><time>8 min ago</time>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="avatar avatar--sm tone-mint">JM</span>
+                                    <div><strong>Rahul</strong> completed a member profile review<time>32 min ago</time>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span class="avatar avatar--sm tone-yellow">SB</span>
+                                    <div><strong>Priya</strong> arranged a member introduction<time>1 h ago</time></div>
+                                </li>
+                            </ul>
+                            <hr />
+                            <a href="tasks.html">View follow-up tasks <i class="icon icon--sm bi bi-arrow-right"
+                                    aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="dropdown">
+                        <button type="button" class="user-btn" data-dropdown aria-expanded="false"
+                            aria-controls="userMenu">
+                            <span class="avatar avatar--sm tone-coral">AK</span>
+                            <span class="user-name">Asha</span>
+                            <i class="icon icon--sm bi bi-chevron-down" aria-hidden="true"></i>
+                        </button>
+                        <div class="dropdown-menu" id="userMenu">
+                            <a href="settings.html"><i class="icon icon--sm bi bi-people" aria-hidden="true"></i>
+                                Profile</a>
+                            <a href="settings.html"><i class="icon icon--sm bi bi-sliders" aria-hidden="true"></i>
+                                Settings</a>
+
+                            <hr />
+                            <a href="login.html"><i class="icon icon--sm bi bi-box-arrow-right" aria-hidden="true"></i>
+                                Sign out</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <main class="content" id="main-content">
+                <div class="page-head">
+                    <div>
+                        <ol class="breadcrumb">
+                            <li><a href="index.html">Dashboard</a></li>
+                            <li aria-current="page">Customer Management</li>
+                        </ol>
+                        <h1> Customer<span class="marker marker--coral"> Management</span></h1>
+                    </div>
+                    <div class="page-actions">
+                        <button type="button" class="btn btn--outline" data-toast="Member profiles exported as CSV"
+                            data-toast-tone="mint"><i class="icon bi bi-download" aria-hidden="true"></i>
+                            Export</button>
+                        <button type="button" class="btn" data-modal-open="newOrderModal"><i class="icon bi bi-plus"
+                                aria-hidden="true"></i> New Register</button>
+                    </div>
+                </div>
+
+                <section class="grid" aria-label="Customer summary">
+                    <article class="card kpi col-3 md-col-6">
+                        <span class="kpi-label"><span class="dot tone-yellow"></span> Total Customers</span>
+                        <div class="kpi-value">1,286</div>
+                        <span class="kpi-note">1,286 registered members</span>
+                    </article>
+
+                    <article class="card kpi col-3 md-col-6">
+                        <span class="kpi-label"><span class="dot tone-mint"></span> Active Profiles</span>
+                        <div class="kpi-value">842</div>
+                        <div class="progress progress--thin tone-mint"><span style="--value: 65.5%"></span></div>
+                    </article>
+
+                    <article class="card kpi col-3 md-col-6">
+                        <span class="kpi-label"><span class="dot tone-green"></span> Verified Profiles</span>
+                        <div class="kpi-value">764</div>
+                        <span class="kpi-note">59.4% of total customers</span>
+                    </article>
+
+                    <article class="card kpi col-3 md-col-6">
+                        <span class="kpi-label"><span class="dot tone-coral"></span> Inactive Customers</span>
+                        <div class="kpi-value">78</div>
+                        <span class="kpi-note">78 profiles need attention</span>
+                    </article>
+                </section>
+
+                <section class="grid">
+                    <article class="card card--flush col-12" data-table>
+                        <div class="toolbar">
+                            <div class="chips" role="group" aria-label="Filter by status">
+                                <button type="button" data-filter="all" aria-pressed="true">All <em>12</em></button>
+                                <button type="button" data-filter="processing" aria-pressed="false">Contacted
+                                    <em>2</em></button>
+                                <button type="button" data-filter="ready" aria-pressed="false">Qualified
+                                    <em>2</em></button>
+                                <button type="button" data-filter="shipped" aria-pressed="false">Converted
+                                    <em>5</em></button>
+                                <button type="button" data-filter="failed" aria-pressed="false">Needs follow-up
+                                    <em>2</em></button>
+                                <button type="button" data-filter="draft" aria-pressed="false">New <em>1</em></button>
+                            </div>
+                        </div>
+
+                        <div class="toolbar toolbar--bulk" data-bulk hidden>
+                            <strong><span data-selected-count>0</span> selected</strong>
+                            <div class="toolbar-end">
+                                <button type="button" class="btn btn--outline btn--sm"
+                                    data-toast="Profile summaries generated" data-toast-tone="mint"><i
+                                        class="icon icon--sm bi bi-printer" aria-hidden="true"></i> Print profile
+                                    summaries</button>
+                                <button type="button" class="btn btn--outline btn--sm"
+                                    data-toast="Profiles marked as qualified"><i class="icon icon--sm bi bi-truck"
+                                        aria-hidden="true"></i> Mark qualified</button>
+                                <button type="button" class="btn btn--danger btn--sm" data-toast="Profiles archived"
+                                    data-toast-tone="coral"><i class="icon icon--sm bi bi-trash3"
+                                        aria-hidden="true"></i> Archive</button>
+                            </div>
+                        </div>
+
+                        <div class="table-wrap">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col" class="col-check"><label class="checkbox"><input type="checkbox"
+                                                    data-select-all aria-label="Select all profiles" /><i
+                                                    class="bi bi-check" aria-hidden="true"></i></label></th>
+                                        <th scope="col" data-sort="text">Lead ID</th>
+                                        <th scope="col" data-sort="text">Profile</th>
+                                        <th scope="col" data-sort="text">Added</th>
+                                        <th scope="col" data-sort="num">Matches</th>
+                                        <th scope="col">Source</th>
+                                        <th scope="col">Status</th>
+                                        <th scope="col" data-sort="num" class="text-right">Membership fee</th>
+                                        <th scope="col"><span class="visually-hidden">Actions</span></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr data-status="shipped">
+                                        <td class="col-check"><label class="checkbox"><input type="checkbox"
+                                                    aria-label="Select lead LEAD-4821" /><i class="bi bi-check"
+                                                    aria-hidden="true"></i></label></td>
+                                        <td class="mono">#LEAD-4821</td>
+                                        <td>
+                                            <div class="cell-main"><span class="avatar avatar--sm tone-yellow">GM</span>
+                                                <div><strong>Aditi Mukherjee</strong><span>Durgapur, West Bengal</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                                        <td class="num">24</td>
+                                        <td>Phone</td>
+                                        <td><span class="badge badge--green">Matched</span></td>
+                                        <td class="text-right mono" data-value="8420.0">INR 8,420.00</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+                                                    data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4821"
+                                                    aria-label="Actions for LEAD-4821"><i class="icon bi bi-three-dots"
+                                                        aria-hidden="true"></i>
+                                                </button>
+                                                <div class="dropdown-menu" id="menu-LEAD-4821">
+                                                    <a href="view-profile.html"><i
+                                                            class="icon icon--sm bi bi-file-earmark-text"
+                                                            aria-hidden="true"></i> View Details</a>
+                                                    <a href="matches.html">
+                                                        <i class="icon bi bi-ladder" aria-hidden="true"></i>
+                                                        Matches</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="processing">
+                                        <td class="col-check"><label class="checkbox"><input type="checkbox"
+                                                    aria-label="Select lead LEAD-4820" /><i class="bi bi-check"
+                                                    aria-hidden="true"></i></label></td>
+                                        <td class="mono">#LEAD-4820</td>
+                                        <td>
+                                            <div class="cell-main"><span class="avatar avatar--sm tone-mint">NH</span>
+                                                <div><strong>Riya Banerjee</strong><span>Kolkata, West Bengal</span>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                                        <td class="num">6</td>
+                                        <td>Email</td>
+                                        <td><span class="badge badge--yellow">Contacted</span></td>
+                                        <td class="text-right mono" data-value="1935.5">INR 1,935.50</td>
+                                        <td class="text-right">
+                                            <div class="dropdown">
+                                                <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm"
+                                                    data-dropdown aria-expanded="false" aria-controls="menu-LEAD-4820"
+                                                    aria-label="Actions for LEAD-4820"><i class="icon bi bi-three-dots"
+                                                        aria-hidden="true"></i></button>
+                                                <div class="dropdown-menu" id="menu-LEAD-4820">
+                                                    <a href="view-profile.html"><i
+                                                            class="icon icon--sm bi bi-file-earmark-text"
+                                                            aria-hidden="true"></i> View Details</a>
+                                                    <a href="matches.html">
+                                                        <i class="icon bi bi-ladder" aria-hidden="true"></i>
+                                                        Matches</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr data-status="failed">
+                                        <td class="col-check"><label class="checkbox"><input type="checkbox"
+                                                    aria-label="Select lead LEAD-4819" /><i class="bi bi-check"
+                                                    aria-hidden="true"></i></label></td>
+                                        <td class="mono">#LEAD-4819</td>
+                                        <td>
+                                            <div class="cell-main"><span class="avatar avatar--sm tone-coral">ST</span>
+                                                <div><strong>Kavita Das</strong><span>Asansol, West Bengal</span></div>
+                                            </div>
+                                        </td>
+                                        <td class="nowrap" data-value="Sep 29, 2026">Sep 29, 2026</td>
+                                        <td class="num">2</td>
+                                        <td>Phone</td>
+                                        <td><span class="badge badge--coral">Needs follow-up</span></td>
+                                        <td class="text-right mono" data-value="489.0">INR 489.00</td>
+                                        <td class="text-right">
+                                            <div class="dropdown"><button type="button"
+                                                    class="icon-btn icon-btn--ghost icon-btn--sm" data-dropdown
+                                                    aria-expanded="false" aria-controls="menu-LEAD-4819"
+                                                    aria-label="Actions for LEAD-4819"><i class="icon bi bi-three-dots"
+                                                        aria-hidden="true"></i></button>
+                                                <div class="dropdown-menu" id="menu-LEAD-4819"><a
+                                                        href="view-profile.html"><i
+                                                            class="icon icon--sm bi bi-file-earmark-text"
+                                                            aria-hidden="true"></i> View Details</a>
+                                                    <a href="matches.html">
+                                                        <i class="icon bi bi-ladder" aria-hidden="true"></i>
+                                                        Matches</a>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                            <div class="empty-state">
+                                <span class="sticker tone-yellow mb-sm">No profiles found</span>
+                                <p>No lead matches your search. Try another keyword or status.</p>
+                            </div>
+                        </div>
+
+                        <div class="card-foot">
+                            <span>Showing <b data-table-count>12</b> of 1,286 leads</span>
+                            <nav class="pagination" aria-label="Pagination">
+                                <button type="button" disabled aria-label="Previous page"><i
+                                        class="icon icon--sm bi bi-chevron-left" aria-hidden="true"></i></button>
+                                <button type="button" aria-current="page">1</button>
+                                <button type="button">2</button>
+                                <button type="button">3</button>
+                                <span class="subtle">-</span>
+                                <button type="button">108</button>
+                                <button type="button" aria-label="Next page"><i
+                                        class="icon icon--sm bi bi-chevron-right" aria-hidden="true"></i></button>
+                            </nav>
+                        </div>
+                    </article>
+                </section>
+
+
+                <dialog class="modal size-lg" id="newOrderModal" aria-labelledby="newOrderTitle">
+                    <form method="dialog" data-demo-form data-toast="Lead created successfully">
+
+                        <div class="modal-head">
+                            <div>
+                                <h2 id="newOrderTitle">New enquiry <span class="sticker tone-yellow mb-2xs">Quick lead
+                                        entry</span></h2>
+                            </div>
+                            <button type="button" class="icon-btn icon-btn--ghost icon-btn--sm" data-modal-close
+                                aria-label="Close">
+                                <i class="icon bi bi-x" aria-hidden="true"></i>
+                            </button>
+                        </div>
+
+                        <div class="modal-body">
+
+                            <!-- OFFICE USE ONLY -->
+                            <section class="form-section">
+                                <h3 class="form-section-title">For Office Use Only</h3>
+
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="officeEno">E. No.</label>
+                                        <input class="input" id="officeEno" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="representativeCode">Representative Code No.</label>
+                                        <input class="input" id="representativeCode" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="photoAttached">Photo Attached</label>
+                                        <select class="select" id="photoAttached">
+                                            <option value="">Select</option>
+                                            <option>Yes</option>
+                                            <option>No</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="photoCopy">Copy</label>
+                                        <input class="input" id="photoCopy" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="officeDate">Date</label>
+                                        <input class="input" id="officeDate" type="date">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="candidateCode">Candidate's Code No.</label>
+                                        <input class="input" id="candidateCode" type="text">
+                                    </div>
+
+
+                                    <div class="upload-box" id="imageUploadBox">
+                                        <input type="file" id="imageUpload" accept="image/*" hidden>
+
+                                        <div class="upload-content" id="uploadContent">
+                                            <div class="upload-icon">
+                                                <i class="bi bi-cloud-arrow-up"></i>
+                                            </div>
+                                            <h4>Upload Candidate Photo</h4>
+                                            <p>Drag & drop your image here or <span>browse files</span></p>
+                                            <small>PNG, JPG or JPEG (Max. 5MB)</small>
+                                        </div>
+
+                                        <div class="upload-preview" id="uploadPreview" hidden>
+                                            <img src="" alt="Candidate Preview" id="previewImage">
+                                            <button type="button" class="remove-upload" id="removeUpload">
+                                                <i class="bi bi-x"></i>
+                                            </button>
+                                            <span class="preview-name" id="previewName"></span>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </section>
+
+                            <!-- CANDIDATE DETAILS -->
+                            <section class="form-section">
+                                <h3 class="form-section-title">Candidate's Details</h3>
+
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="candidateName">Candidate's Name</label>
+                                        <input class="input" id="candidateName" type="text" required>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="gender">Gender</label>
+                                        <select class="select" id="gender" required>
+                                            <option value="">Select Gender</option>
+                                            <option>Male</option>
+                                            <option>Female</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="maritalStatus">Marital Status</label>
+                                        <select class="select" id="maritalStatus">
+                                            <option value="">Select Status</option>
+                                            <option>Unmarried</option>
+                                            <option>Widow</option>
+                                            <option>Widower</option>
+                                            <option>Divorcee</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="issueDetails">Issue Details</label>
+                                        <select class="select" id="issueDetails">
+                                            <option value="">Select</option>
+                                            <option>With Issue</option>
+                                            <option>Without Issue</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="religion">Religion</label>
+                                        <input class="input" id="religion" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="motherTongue">Mother Tongue</label>
+                                        <input class="input" id="motherTongue" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="caste">Caste</label>
+                                        <select class="select" id="caste">
+                                            <option value="">Select Caste</option>
+                                            <option>General</option>
+                                            <option>OBC</option>
+                                            <option>SC</option>
+                                            <option>ST</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="origin">Origin (With District)</label>
+                                        <input class="input" id="origin" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="presentHomeTown">Present Home Town</label>
+                                        <input class="input" id="presentHomeTown" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="gotra">Gotra</label>
+                                        <input class="input" id="gotra" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="gan">Gan</label>
+                                        <input class="input" id="gan" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="rashi">Rashi</label>
+                                        <input class="input" id="rashi" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="bloodGroup">Blood Group</label>
+                                        <select class="select" id="bloodGroup">
+                                            <option value="">Select Blood Group</option>
+                                            <option>A+</option>
+                                            <option>A-</option>
+                                            <option>B+</option>
+                                            <option>B-</option>
+                                            <option>AB+</option>
+                                            <option>AB-</option>
+                                            <option>O+</option>
+                                            <option>O-</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="dateOfBirth">Date of Birth</label>
+                                        <input class="input" id="dateOfBirth" type="date">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="presentAge">Present Age (Years)</label>
+                                        <input class="input" id="presentAge" type="number">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="timeOfBirth">Time of Birth</label>
+                                        <input class="input" id="timeOfBirth" type="time">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="placeOfBirth">Place of Birth</label>
+                                        <input class="input" id="placeOfBirth" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="height">Height</label>
+                                        <input class="input" id="height" type="text" placeholder="e.g. 5 ft 6 in">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="complexion">Complexion</label>
+                                        <input class="input" id="complexion" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="weight">Weight (KG)</label>
+                                        <input class="input" id="weight" type="number">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="bodyType">Body Type</label>
+                                        <input class="input" id="bodyType" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="physicalProblem">Physical / Mental Problem or Hereditary
+                                            Disease</label>
+                                        <textarea class="input" id="physicalProblem" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="hobby">Hobby</label>
+                                        <textarea class="input" id="hobby" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="education">Education Qualification</label>
+                                        <textarea class="input" id="education" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="otherQualification">Other Qualification / Extracurricular
+                                            Activities</label>
+                                        <textarea class="input" id="otherQualification" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="occupation">Occupation (Give Details)</label>
+                                        <textarea class="input" id="occupation" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="workPlace">Place of Work</label>
+                                        <input class="input" id="workPlace" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="income">Income (PM / PA)</label>
+                                        <input class="input" id="income" type="text">
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- CANDIDATE EXPECTATION -->
+                            <section class="form-section">
+                                <h3 class="form-section-title">Candidate's Expectation</h3>
+
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="expectedMaritalStatus">Marital Status</label>
+                                        <select class="select" id="expectedMaritalStatus">
+                                            <option value="">Select Status</option>
+                                            <option>Unmarried</option>
+                                            <option>Widow</option>
+                                            <option>Widower</option>
+                                            <option>Divorcee</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedIssue">Issue Preference</label>
+                                        <select class="select" id="expectedIssue">
+                                            <option value="">Select</option>
+                                            <option>With Issue</option>
+                                            <option>Without Issue</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedReligion">Religion</label>
+                                        <input class="input" id="expectedReligion" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedMotherTongue">Mother Tongue</label>
+                                        <input class="input" id="expectedMotherTongue" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedCaste">Caste</label>
+                                        <input class="input" id="expectedCaste" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedOrigin">Origin</label>
+                                        <input class="input" id="expectedOrigin" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="ageLimit">Age Limit</label>
+                                        <input class="input" id="ageLimit" type="text" placeholder="e.g. 25 - 30">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedHeight">Height</label>
+                                        <input class="input" id="expectedHeight" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedComplexion">Complexion</label>
+                                        <input class="input" id="expectedComplexion" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedBloodGroup">Blood Group</label>
+                                        <input class="input" id="expectedBloodGroup" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedGotra">Gotra</label>
+                                        <input class="input" id="expectedGotra" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="expectedGan">Gan</label>
+                                        <input class="input" id="expectedGan" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="preferableArea">Preferable Area</label>
+                                        <input class="input" id="preferableArea" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="expectedQualification">Qualification</label>
+                                        <textarea class="input" id="expectedQualification" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="expectedOccupation">Occupation</label>
+                                        <textarea class="input" id="expectedOccupation" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="minimumIncome">Minimum Acceptable Income (PM / PA)</label>
+                                        <input class="input" id="minimumIncome" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="familyLikings">About Family Likings</label>
+                                        <input class="input" id="familyLikings" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="expectationNotes">Other Notes (If Any)</label>
+                                        <textarea class="input" id="expectationNotes" rows="3"></textarea>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- FAMILY BACKGROUND -->
+                            <section class="form-section">
+                                <h3 class="form-section-title">Family Background (Occupational Details)</h3>
+
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="fatherOccupation">Father's Occupation</label>
+                                        <input class="input" id="fatherOccupation" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="motherOccupation">Mother's Occupation</label>
+                                        <input class="input" id="motherOccupation" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="familyOrigin">Origin</label>
+                                        <input class="input" id="familyOrigin" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="familyCaste">Caste</label>
+                                        <input class="input" id="familyCaste" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="brothers">Brother(s)</label>
+                                        <textarea class="input" id="brothers" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="sisters">Sister(s)</label>
+                                        <textarea class="input" id="sisters" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="familyProperty">Family Property (Own House / Land etc.)</label>
+                                        <textarea class="input" id="familyProperty" rows="2"></textarea>
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="familyOtherInfo">Other Information (If Any)</label>
+                                        <textarea class="input" id="familyOtherInfo" rows="2"></textarea>
+                                    </div>
+                                </div>
+                            </section>
+
+                            <!-- CANDIDATE ADDRESS DETAILS -->
+                            <section class="form-section">
+                                <h3 class="form-section-title">Candidate's Name, Address etc.</h3>
+
+                                <div class="form-grid">
+                                    <div class="field">
+                                        <label for="candidateTitle">Candidate's Title</label>
+                                        <select class="select" id="candidateTitle">
+                                            <option value="">Select</option>
+                                            <option>Mr.</option>
+                                            <option>Miss.</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="fullCandidateName">Candidate's Name</label>
+                                        <input class="input" id="fullCandidateName" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="guardianTitle">Guardian's Title</label>
+                                        <select class="select" id="guardianTitle">
+                                            <option value="">Select</option>
+                                            <option>Mr.</option>
+                                            <option>Mrs.</option>
+                                            <option>Miss.</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="guardianName">Guardian's Name</label>
+                                        <input class="input" id="guardianName" type="text">
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="guardianRelationship">Relationship</label>
+                                        <input class="input" id="guardianRelationship" type="text">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="correspondenceAddress">Correspondence Address</label>
+                                        <textarea class="input" id="correspondenceAddress" rows="3"></textarea>
+                                    </div>
+
+                                    <div class="field">
+                                        <label for="pinCode">Pin Code</label>
+                                        <input class="input" id="pinCode" type="text" inputmode="numeric" maxlength="6">
+                                    </div>
+
+                                    <div class="field span-2">
+                                        <label for="landmark">Landmark (If Any)</label>
+                                        <input class="input" id="landmark" type="text">
+                                    </div>
+                                </div>
+                            </section>
+
+                        </div>
+
+                        <div class="modal-actions">
+                            <button type="button" class="btn btn--ghost" data-modal-close>Cancel</button>
+                            <button type="submit" class="btn">Create Lead</button>
+                        </div>
+
+                    </form>
+                </dialog>
+
+
+                <footer class="footer">
+                    <span>&copy; 2026 Astha Marriage Bureau. All rights reserved.</span>
+
+                </footer>
+            </main>
+        </div>
+    </div>
+
+    <div class="toast-region" id="toastRegion" role="status" aria-live="polite"></div>
+
+    <script src="js/main.js"></script>
+
+    <script>
+
+        const uploadBox = document.getElementById("imageUploadBox");
+        const imageInput = document.getElementById("imageUpload");
+        const uploadContent = document.getElementById("uploadContent");
+        const uploadPreview = document.getElementById("uploadPreview");
+        const previewImage = document.getElementById("previewImage");
+        const previewName = document.getElementById("previewName");
+        const removeUpload = document.getElementById("removeUpload");
+
+        let uploadedImageUrl = null;
+
+        function showImage(file) {
+            if (!file) return;
+
+            if (!file.type.startsWith("image/")) {
+                alert("Please upload a valid image.");
+                return;
+            }
+
+            if (file.size > 5 * 1024 * 1024) {
+                alert("Image size should not exceed 5MB.");
+                return;
+            }
+
+            if (uploadedImageUrl) {
+                URL.revokeObjectURL(uploadedImageUrl);
+            }
+
+            uploadedImageUrl = URL.createObjectURL(file);
+
+            previewImage.src = uploadedImageUrl;
+            previewName.textContent = file.name;
+
+            uploadContent.hidden = true;
+            uploadPreview.hidden = false;
+        }
+
+        uploadBox.addEventListener("click", (e) => {
+            if (e.target.closest(".remove-upload")) return;
+            imageInput.click();
+        });
+
+        imageInput.addEventListener("change", (e) => {
+            showImage(e.target.files[0]);
+        });
+
+        uploadBox.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            uploadBox.classList.add("dragover");
+        });
+
+        uploadBox.addEventListener("dragleave", (e) => {
+            if (!uploadBox.contains(e.relatedTarget)) {
+                uploadBox.classList.remove("dragover");
+            }
+        });
+
+        uploadBox.addEventListener("drop", (e) => {
+            e.preventDefault();
+            uploadBox.classList.remove("dragover");
+
+            const file = e.dataTransfer.files[0];
+            showImage(file);
+
+            if (file && file.type.startsWith("image/") && file.size <= 5 * 1024 * 1024) {
+                const dataTransfer = new DataTransfer();
+                dataTransfer.items.add(file);
+                imageInput.files = dataTransfer.files;
+            }
+        });
+
+        removeUpload.addEventListener("click", (e) => {
+            e.stopPropagation();
+
+            imageInput.value = "";
+
+            if (uploadedImageUrl) {
+                URL.revokeObjectURL(uploadedImageUrl);
+                uploadedImageUrl = null;
+            }
+
+            previewImage.src = "";
+            previewName.textContent = "";
+
+            uploadPreview.hidden = true;
+            uploadContent.hidden = false;
+        });
+
+    </script>
+</body>
+
+</html>

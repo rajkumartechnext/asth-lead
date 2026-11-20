@@ -51,13 +51,17 @@
             <span class="nav-text">Leads</span>
             <span class="nav-count">12</span>
           </a>
+          <a class="nav-link" href="customer-management.html" aria-current="page" title="Customer Management">
+            <i class="icon bi bi-people" aria-hidden="true"></i>
+            <span class="nav-text">Customer Management</span>
+          </a>
           <a class="nav-link" href="membership.html" title="Membership fees">
             <i class="icon bi bi-file-earmark-text" aria-hidden="true"></i>
             <span class="nav-text">Membership fees</span>
           </a>
-          <a class="nav-link" href="matches.html" aria-current="page" title="Matches">
-            <i class="icon bi bi-ladder" aria-hidden="true"></i>
-            <span class="nav-text">Matches</span>
+          <a class="nav-link" href="incoming-call.html" title="Incoming Call">
+            <i class="icon bi bi-telephone-inbound" aria-hidden="true"></i>
+            <span class="nav-text">Incoming Call</span>
           </a>
         </div>
         <div class="nav-group">
@@ -67,7 +71,7 @@
             <span class="nav-text">Membership plans</span>
             <span class="nav-count nav-count--accent">5</span>
           </a> -->
-           <a class="nav-link" href="tasks.html" title="Tasks">
+          <a class="nav-link" href="tasks.html" title="Tasks">
             <i class="icon bi bi-check2-square" aria-hidden="true"></i>
             <span class="nav-text">Task</span>
             <span class="nav-count">8</span>
@@ -118,6 +122,7 @@
 
 
         <div class="topbar-actions">
+
           <a href="massege.html">
             <button type="button" class="icon-btn" aria-pressed="false">
               <div class="under-msg" aria-hidden="true">4</div>
@@ -183,6 +188,13 @@
               <h1>Matches <span class="sticker sticker--inline tone-mint text-sm">248 member profiles</span></h1>
             </div>
             <div class="page-actions">
+              <form class="search" role="search" action="orders.html">
+                <i class="bi bi-search"></i>
+                <label for="globalSearch" class="visually-hidden">Search</label>
+                <input type="search" name="q" placeholder="Search matches…" autocomplete="off">
+                <button type="submit" class="visually-hidden"><i class="bi bi-search"></i></button>
+              </form>
+
               <div class="segmented" role="group" aria-label="View">
                 <button type="button" data-view="grid" aria-pressed="true" aria-label="Grid view"><i
                     class="icon icon--sm bi bi-grid" aria-hidden="true"></i></button>
@@ -204,6 +216,9 @@
                     <span>Height: 5ft 2in</span>
                     <span>Durgapur, West Bengal</span>
                   </div>
+                  <div class="view-prof">
+                    <a href="view-profile.html"><i class="bi bi-arrow-up-right-circle"></i></a>
+                  </div>
                 </div>
                 <dl>
                   <div>
@@ -217,15 +232,15 @@
                 </dl>
                 <div class="progress-row">
                   <span class="progress-label fw-regular muted">Match score</span>
-                  <span class="progress-value">86</span>
+                  <span class="progress-value">98</span>
                   <div class="progress tone-green" role="progressbar" aria-label="Match score of Ashab Ghosh"
-                    aria-valuenow="86" aria-valuemin="0" aria-valuemax="100"><span style="--value: 86%"></span></div>
+                    aria-valuenow="98" aria-valuemin="0" aria-valuemax="100"><span style="--value: 86%"></span></div>
                 </div>
                 <div class="cluster justify-between">
-                  <span class="badge badge--dark">Priority profile</span>
+                  <span class="badge badge--dark">Fully Match</span>
                   <button type="button" class="btn btn--ghost btn--sm" data-toast="Message draft opened for Ashab Ghosh"
                     data-toast-tone="mint"><i class="icon icon--sm bi bi-envelope" aria-hidden="true"></i>
-                    Contact</button>
+                    Send Match</button>
                 </div>
               </article>
 
@@ -236,6 +251,9 @@
                     <strong>Neha Sharma</strong>
                     <span>Height: 5ft 4in</span>
                     <span>Kolkata, West Bengal</span>
+                  </div>
+                  <div class="view-prof">
+                    <a href="view-profile.html"><i class="bi bi-arrow-up-right-circle"></i></a>
                   </div>
                 </div>
                 <dl>
@@ -255,10 +273,10 @@
                     aria-valuenow="92" aria-valuemin="0" aria-valuemax="100"><span style="--value: 92%"></span></div>
                 </div>
                 <div class="cluster justify-between">
-                  <span class="badge badge--green">Active</span>
+                  <span class="badge badge--green">Prefect Match</span>
                   <button type="button" class="btn btn--ghost btn--sm" data-toast="Message draft opened for Neha Sharma"
                     data-toast-tone="mint"><i class="icon icon--sm bi bi-envelope" aria-hidden="true"></i>
-                    Contact</button>
+                    Send Match</button>
                 </div>
               </article>
 
@@ -269,6 +287,9 @@
                     <strong>Sneha Das</strong>
                     <span>Height: 5ft 3in</span>
                     <span>Asansol, West Bengal</span>
+                  </div>
+                  <div class="view-prof">
+                    <a href="view-profile.html"><i class="bi bi-arrow-up-right-circle"></i></a>
                   </div>
                 </div>
                 <dl>
@@ -289,10 +310,10 @@
                       style="--value: 78%"></span></div>
                 </div>
                 <div class="cluster justify-between">
-                  <span class="badge badge--coral">New profile</span>
+                  <span class="badge badge--coral">Semi Match</span>
                   <button type="button" class="btn btn--ghost btn--sm" data-toast="Message draft opened for Sneha Das"
                     data-toast-tone="mint"><i class="icon icon--sm bi bi-envelope" aria-hidden="true"></i>
-                    Contact</button>
+                    Send Match</button>
                 </div>
               </article>
 
@@ -303,6 +324,9 @@
                     <strong>Priya Agarwal</strong>
                     <span>Height: 5ft 5in</span>
                     <span>Durgapur, West Bengal</span>
+                  </div>
+                  <div class="view-prof">
+                    <a href="view-profile.html"><i class="bi bi-arrow-up-right-circle"></i></a>
                   </div>
                 </div>
                 <dl>
@@ -322,80 +346,14 @@
                     aria-valuenow="88" aria-valuemin="0" aria-valuemax="100"><span style="--value: 88%"></span></div>
                 </div>
                 <div class="cluster justify-between">
-                  <span class="badge badge--green">Active</span>
+                  <span class="badge badge--coral">Semi Match</span>
                   <button type="button" class="btn btn--ghost btn--sm"
                     data-toast="Message draft opened for Priya Agarwal" data-toast-tone="mint"><i
                       class="icon icon--sm bi bi-envelope" aria-hidden="true"></i>
-                    Contact</button>
+                    Send Match</button>
                 </div>
               </article>
 
-              <article class="card customer-card">
-                <div class="customer-top">
-                  <img src="images/pro-2.jpg" alt="">
-                  <div>
-                    <strong>Riya Mukherjee</strong>
-                    <span>Height: 5ft 6in</span>
-                    <span>Howrah, West Bengal</span>
-                  </div>
-                </div>
-                <dl>
-                  <div>
-                    <dt>Religion</dt>
-                    <dd>Hindu</dd>
-                  </div>
-                  <div>
-                    <dt>Community</dt>
-                    <dd>Baidya</dd>
-                  </div>
-                </dl>
-                <div class="progress-row">
-                  <span class="progress-label fw-regular muted">Match score</span>
-                  <span class="progress-value">74</span>
-                  <div class="progress tone-green" role="progressbar" aria-label="Match score of Riya Mukherjee"
-                    aria-valuenow="74" aria-valuemin="0" aria-valuemax="100"><span style="--value: 74%"></span></div>
-                </div>
-                <div class="cluster justify-between">
-                  <span class="badge badge--yellow">Under review</span>
-                  <button type="button" class="btn btn--ghost btn--sm"
-                    data-toast="Message draft opened for Riya Mukherjee" data-toast-tone="mint"><i
-                      class="icon icon--sm bi bi-envelope" aria-hidden="true"></i> Contact</button>
-                </div>
-              </article>
-
-              <article class="card customer-card">
-                <div class="customer-top">
-                  <img src="images/pro-3.jpg" alt="">
-                  <div>
-                    <strong>Priyanka Roy</strong>
-                    <span>Height: 5ft 2in</span>
-                    <span>Bankura, West Bengal</span>
-                  </div>
-                </div>
-                <dl>
-                  <div>
-                    <dt>Religion</dt>
-                    <dd>Hindu</dd>
-                  </div>
-                  <div>
-                    <dt>Community</dt>
-                    <dd>Kayastha</dd>
-                  </div>
-                </dl>
-                <div class="progress-row">
-                  <span class="progress-label fw-regular muted">Match score</span>
-                  <span class="progress-value">81</span>
-                  <div class="progress tone-green" role="progressbar" aria-label="Match score of Priyanka Roy"
-                    aria-valuenow="81" aria-valuemin="0" aria-valuemax="100"><span style="--value: 81%"></span></div>
-                </div>
-                <div class="cluster justify-between">
-                  <span class="badge badge--green">Active</span>
-                  <button type="button" class="btn btn--ghost btn--sm"
-                    data-toast="Message draft opened for Priyanka Roy" data-toast-tone="mint"><i
-                      class="icon icon--sm bi bi-envelope" aria-hidden="true"></i>
-                    Contact</button>
-                </div>
-              </article>
 
               <article class="card customer-card">
                 <div class="customer-top">
@@ -404,6 +362,9 @@
                     <strong>Swati Chatterjee</strong>
                     <span>Height: 5ft 4in</span>
                     <span>Siliguri, West Bengal</span>
+                  </div>
+                  <div class="view-prof">
+                    <a href="view-profile.html"><i class="bi bi-arrow-up-right-circle"></i></a>
                   </div>
                 </div>
                 <dl>
@@ -423,10 +384,10 @@
                     aria-valuenow="89" aria-valuemin="0" aria-valuemax="100"><span style="--value: 89%"></span></div>
                 </div>
                 <div class="cluster justify-between">
-                  <span class="badge badge--green">Active</span>
+                  <span class="badge badge--green">Prefect Match</span>
                   <button type="button" class="btn btn--ghost btn--sm"
                     data-toast="Message draft opened for Swati Chatterjee" data-toast-tone="mint"><i
-                      class="icon icon--sm bi bi-envelope" aria-hidden="true"></i> Contact</button>
+                      class="icon icon--sm bi bi-envelope" aria-hidden="true"></i> Send Match</button>
                 </div>
               </article>
             </div>
@@ -457,7 +418,7 @@
                       <td>
                         <div class="progress progress--thin tone-green w-6"><span style="--value: 86%"></span></div>
                       </td>
-                      <td><span class="badge badge--dark">Priority profile</span></td>
+                      <td><span class="badge badge--dark">Fully Match</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -470,7 +431,7 @@
                       <td>
                         <div class="progress progress--thin tone-green w-6"><span style="--value: 64%"></span></div>
                       </td>
-                      <td><span class="badge badge--green">Active</span></td>
+                      <td><span class="badge badge--green">Prefect Match</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -496,7 +457,7 @@
                       <td>
                         <div class="progress progress--thin tone-yellow w-6"><span style="--value: 58%"></span></div>
                       </td>
-                      <td><span class="badge badge--green">Active</span></td>
+                      <td><span class="badge badge--green">Prefect Match</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -522,7 +483,7 @@
                       <td>
                         <div class="progress progress--thin tone-green w-6"><span style="--value: 70%"></span></div>
                       </td>
-                      <td><span class="badge badge--green">Active</span></td>
+                      <td><span class="badge badge--green">Prefect Match</span></td>
                     </tr>
                     <tr>
                       <td>
@@ -535,7 +496,7 @@
                       <td>
                         <div class="progress progress--thin tone-yellow w-6"><span style="--value: 46%"></span></div>
                       </td>
-                      <td><span class="badge badge--green">Active</span></td>
+                      <td><span class="badge badge--green">Prefect Match</span></td>
                     </tr>
                     <tr>
                       <td>
